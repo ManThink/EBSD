@@ -1,0 +1,281 @@
+/*###ICF### Section handled by ICF editor, don't touch! ****/
+/*-Editor annotation file-*/
+/* IcfEditorFile="$TOOLKIT_DIR$\config\ide\IcfEditor\cortex_v1_1.xml" */
+/*-Specials-*/
+define symbol __ICFEDIT_intvec_start__ = 0x00000000;
+/*-Memory Regions-*/
+
+/***INT vector 1KB***/
+define symbol __ICFEDIT_ROM_Linker_start__ = 0x00000000;
+define symbol __ICFEDIT_ROM_Linker_end__   = 0x000003ff;
+
+define symbol __FlashConfig_start__ = 0x00000400;
+define symbol __FlashConfig_end__   = 0x0000040f;
+
+/***22k for mcu driver and utility***/
+define symbol __ICFEDIT_ROM_Driver_start__ = 0x00000410;
+define symbol __ICFEDIT_ROM_Driver_end__   = 0x00005bff;
+
+/*** 10k for mpos ***/
+define symbol __ICFEDIT_ROM_MPOS_start__ = 0x00005c00;
+define symbol __ICFEDIT_ROM_MPOS_end__   = 0x000083ff;
+
+/*** 9k for uplink peripharal driver ***/
+define symbol __ICFEDIT_ROM_UpDriver_start__ = 0x00008400;
+define symbol __ICFEDIT_ROM_UpDriver_end__   = 0x0000a7ff;
+
+/*** 5k for const data ***/
+define symbol __ICFEDIT_ROM_Const_start__ = 0x0000a800;
+define symbol __ICFEDIT_ROM_Const_end__   = 0x0000bbff;
+
+/*** 35k for uplink protocal stack ***/
+define symbol __ICFEDIT_ROM_UpStack_start__ = 0x0000bc00;
+define symbol __ICFEDIT_ROM_UpStack_end__   = 0x000147ff;
+
+/*** 46k for edgebus ***/
+define symbol __ICFEDIT_ROM_Edgebus_start__ = 0x00014800;
+define symbol __ICFEDIT_ROM_Edgebus_end__   = 0x0001ffff;
+
+/*** 11k for user code ***/
+//define symbol __ICFEDIT_ROM_UserCode_start__ = 0x00019800;
+//define symbol __ICFEDIT_ROM_UserCode_end__   = 0x0001d3ff;
+
+/*** 100k for UserCode ***/
+define symbol __ICFEDIT_ROM_UserCode_start__ = 0x00020000;
+define symbol __ICFEDIT_ROM_UserCode_end__   = 0x00038fff;
+
+/*** 8k for Resv***/
+define symbol __ICFEDIT_ROM_Resv_start__ = 0x00039000;
+define symbol __ICFEDIT_ROM_Resv_end__   = 0x0003afff;
+
+/*** 4k for user data  ***/
+define symbol __ICFEDIT_ROM_UserData_start__ = 0x0003b000;
+define symbol __ICFEDIT_ROM_UserData_end__   = 0x0003bfff;
+
+/*** 2k for user para ***/
+define symbol __ICFEDIT_ROM_UserPara_start__ = 0x0003c000;
+define symbol __ICFEDIT_ROM_UserPara_end__   = 0x0003c7ff; 
+
+/*** 8k for edgebus's business para ***/
+define symbol __ICFEDIT_ROM_EBPara_start__ = 0x0003c800;
+define symbol __ICFEDIT_ROM_EBPara_end__   = 0x0003e7ff;
+
+/*** 4k for fw/radio/cf/app para ***/
+define symbol __ICFEDIT_ROM_FWPara_start__ = 0x0003e800;
+define symbol __ICFEDIT_ROM_FWPara_end__   = 0x0003f7ff;
+
+/*** 2k for virtual OTP ***/
+define symbol __ICFEDIT_ROM_OTP_start__ =0x0003f800;
+define symbol __ICFEDIT_ROM_OTP_end__   =0x0003ffff;
+
+define symbol __ICFEDIT_region_EROM1_start__ = 0x0;
+define symbol __ICFEDIT_region_EROM1_end__   = 0x0;
+define symbol __ICFEDIT_region_EROM2_start__ = 0x0;
+define symbol __ICFEDIT_region_EROM2_end__   = 0x0;
+define symbol __ICFEDIT_region_EROM3_start__ = 0x0;
+define symbol __ICFEDIT_region_EROM3_end__   = 0x0;
+
+
+
+
+
+/*** 10k for mpos ***/
+define symbol __ICFEDIT_RAM_MPOS_start__ = 0x20000000;
+define symbol __ICFEDIT_RAM_MPOS_end__   = 0x200027ff;
+
+/*** 1k for uplink peripheral driver ***/
+define symbol __ICFEDIT_RAM_UpDriver_start__ = 0x20002800;
+define symbol __ICFEDIT_RAM_UpDriver_end__   = 0x20002bff;
+
+
+/*** 15k for edgebus ***/
+define symbol __ICFEDIT_RAM_Edgebus_start__ = 0x20002c00;
+define symbol __ICFEDIT_RAM_Edgebus_end__   = 0x200067ff;
+
+/*** 6k for CStack and Heap***/
+define symbol __ICFEDIT_RAM_CStack_start__ = 0x20006800;
+define symbol __ICFEDIT_RAM_CStack_end__   = 0x20007fff;
+
+define symbol __ICFEDIT_region_ERAM1_start__ = 0x0;
+define symbol __ICFEDIT_region_ERAM1_end__   = 0x0;
+define symbol __ICFEDIT_region_ERAM2_start__ = 0x0;
+define symbol __ICFEDIT_region_ERAM2_end__   = 0x0;
+define symbol __ICFEDIT_region_ERAM3_start__ = 0x0;
+define symbol __ICFEDIT_region_ERAM3_end__   = 0x0;
+/*-Sizes-*/
+define symbol __ICFEDIT_size_cstack__ = 0x1600;  //stack size:5k
+define symbol __ICFEDIT_size_heap__   = 0x0400;  //heap size:1k
+/**** End of ICF editor section. ###ICF###*/
+
+define memory mem with size = 4G;
+
+define region IROM_Driver_region   = mem:[from __ICFEDIT_ROM_Driver_start__ to __ICFEDIT_ROM_Driver_end__];
+define region IROM_MPOS_region   = mem:[from __ICFEDIT_ROM_MPOS_start__ to __ICFEDIT_ROM_MPOS_end__];
+define region IROM_UpDriver_region   = mem:[from __ICFEDIT_ROM_UpDriver_start__ to __ICFEDIT_ROM_UpDriver_end__];
+define region IROM_Const_region  =mem:[from __ICFEDIT_ROM_Const_start__ to __ICFEDIT_ROM_Const_end__];
+define region IROM_UpStack_region   = mem:[from __ICFEDIT_ROM_UpStack_start__ to __ICFEDIT_ROM_UpStack_end__];
+define region IROM_Edgebus_region   = mem:[from __ICFEDIT_ROM_Edgebus_start__ to __ICFEDIT_ROM_Edgebus_end__];
+define region IROM_UserCode_region   = mem:[from __ICFEDIT_ROM_Edgebus_start__ to __ICFEDIT_ROM_Edgebus_end__]
+                                       |mem:[from __ICFEDIT_ROM_UserCode_start__ to __ICFEDIT_ROM_UserCode_end__];
+define region IROM_UserPara_region   = mem:[from __ICFEDIT_ROM_UserPara_start__ to __ICFEDIT_ROM_UserPara_end__];
+define region IROM_EBPara_region   = mem:[from __ICFEDIT_ROM_EBPara_start__ to __ICFEDIT_ROM_EBPara_end__];
+define region IROM_FWPara_region   = mem:[from __ICFEDIT_ROM_FWPara_start__ to __ICFEDIT_ROM_FWPara_end__];
+define region IROM_OTP_region   = mem:[from __ICFEDIT_ROM_OTP_start__ to __ICFEDIT_ROM_OTP_end__];                              
+define region EROM_region   =   mem:[from __ICFEDIT_region_EROM1_start__ to __ICFEDIT_region_EROM1_end__]
+                              | mem:[from __ICFEDIT_region_EROM2_start__ to __ICFEDIT_region_EROM2_end__]
+                              | mem:[from __ICFEDIT_region_EROM3_start__ to __ICFEDIT_region_EROM3_end__];
+
+define region IRAM_MPOS   =  mem:[from __ICFEDIT_RAM_MPOS_start__ to __ICFEDIT_RAM_MPOS_end__] 
+                             |mem:[from __ICFEDIT_RAM_UpDriver_start__ to __ICFEDIT_RAM_UpDriver_end__]
+                             |mem:[from __ICFEDIT_RAM_Edgebus_start__ to __ICFEDIT_RAM_Edgebus_end__]
+                              ;
+
+//define region IRAM_User   =  mem:[from __ICFEDIT_RAM_User_start__ to __ICFEDIT_RAM_User_end__]; 
+
+                              
+define region ERAM_region   =   mem:[from __ICFEDIT_region_ERAM1_start__ to __ICFEDIT_region_ERAM1_end__]
+                              | mem:[from __ICFEDIT_region_ERAM2_start__ to __ICFEDIT_region_ERAM2_end__]
+                              | mem:[from __ICFEDIT_region_ERAM3_start__ to __ICFEDIT_region_ERAM3_end__];
+                              
+                              
+define region STACK_region  = mem:[from __ICFEDIT_RAM_CStack_start__ to __ICFEDIT_RAM_CStack_end__]; 
+
+define region Config_region =   mem:[from __FlashConfig_start__          to __FlashConfig_end__];
+
+define block CSTACK    with alignment = 8, size = __ICFEDIT_size_cstack__   { };
+define block HEAP      with alignment = 8, size = __ICFEDIT_size_heap__     { };
+
+initialize by copy { readwrite };
+do not initialize { section .noinit };
+
+place at address mem:__ICFEDIT_intvec_start__ { readonly section .intvec };
+
+place in IROM_Driver_region
+{
+readonly object  exit.o,
+readonly object  low_level_init.o,
+readonly object  DblAddSub.o,
+readonly object  DblCmpEq.o,
+readonly object  DblCmpGe.o,
+readonly object  DblCmpLe.o,
+readonly object  DblDiv.o,
+readonly object  DblMul.o,
+readonly object  DblToFlt.o,
+readonly object  DblToI32.o,
+readonly object  DblToI64.o,
+readonly object  FltDiv.o,
+readonly object  FltToDbl.o,
+readonly object  FltToS32.o,
+readonly object  IxxToDbl.o,
+readonly object  IxxToFlt.o,
+readonly object  ceil.o,
+readonly object  floor.o,
+readonly object  ABImemcpy.o,
+readonly object  ABImemset.o,
+readonly object  I32DivMod.o,
+readonly object  I64DivMod.o,
+readonly object  I64DivZer.o,
+readonly object  I64Mul.o,
+readonly object  I64Shl.o,
+readonly object  IntDivZer.o,
+readonly object  S64Shr.o,
+readonly object  U64Shr.o,
+readonly object  cexit.o,
+readonly object  cmain.o,
+readonly object  copy_init3.o,
+readonly object  cstartup_M.o,
+readonly object  ata_init.o,
+readonly object  uread4.o,
+readonly object  uread8.o,
+readonly object  uwrite4.o,
+readonly object  uwrite8.o,
+readonly object  zero_init3.o,
+readonly object  exit.o,
+readonly object  Baord.o,
+readonly object  IWdg.o,
+readonly object  I32DivModFast.o,
+readonly object  FltAddSub.o,
+readonly object  data_init.o,
+readonly object  interrupts_hc32l19x.o,
+readonly object  LWS_IT.o,
+readonly object  LowPower.o,
+readonly object  MT_HC32L19_ADC.o,
+readonly object  MT_HC32L19_Flash.o,
+readonly object  MT_HC32L19_GPIO.o,
+readonly object  MT_HC32L19_LPTimer.o,
+readonly object  MT_HC32L19_LPUART.o,
+readonly object  MT_HC32L19_RTC.o,
+readonly object  MT_HC32L19_SPI.o,
+readonly object  MT_HC32L19_Timer.o,
+readonly object  HC32L19_sysctrl.o,
+readonly object  MT_HC32L19_UART.o,
+readonly object  smc.o,
+readonly object  system_hc32l19x.o,
+readonly object  systermProtect.o,
+readonly object  ModeBus.o,
+readonly object  MyFlash.o,
+readonly object  MyInline.o,
+readonly object  utilities.o,
+readonly object  flash_kinetisRamFunc.o
+
+};
+
+place in IROM_MPOS_region{
+readonly object  Task.o,
+readonly object  mpos_ramfun.o,
+readonly object  timer.o,
+readonly object  Global.o,
+readonly object  Global_Driver.o,
+readonly object  Global_System.o,
+readonly object  Global_app.o,
+readonly object  main.o,
+readonly object  MP_FUOTA.o,
+readonly object  TickS.o
+};
+place in IROM_UpDriver_region{
+readonly object  Global_Radio.o,
+readonly object  radio.o,
+readonly object  sx1280-hal.o, 
+readonly object  sx1280.o,
+readonly object  sx126x-board.o,
+readonly object  sx126x.o,
+readonly object  sx1276-board.o,
+readonly object  sx1276.o,
+};
+place in IROM_UpStack_region{
+readonly object  InterFace.o,
+readonly object  LoRaChanConfig.o,
+readonly object  LoRaCrypto.o,
+readonly object  LoRaMidware.o,
+readonly object  ParaInitial.o,
+readonly object  aes.o,
+readonly object  lorabase.o,
+readonly object  lws.o
+};
+
+place in IROM_Edgebus_region{
+readonly object  CrcCal.o,
+readonly object  LoraDn.o,
+readonly object  MP_INT.o,
+readonly object  MP_LWS.o,
+readonly object  MyAPP.o,
+readonly object  MyBoard.o,
+readonly object  MyGlobal.o,
+readonly object  MyTask.o,
+readonly object  ParaParse.o,
+readonly object  QueryUp.o,
+readonly object  mymain.o
+};
+place in IROM_UserCode_region{
+readonly object  MyAppHook.o,
+readonly object  BackHaulIF.o,
+readonly object  EBHook.o
+};
+
+place in IROM_Const_region{readonly  data object aes.o,readonly  data object utilities.o,readonly  data object LoRaChanConfig.o}; //
+place in IROM_UserCode_region  {readonly};
+place in EROM_region  {readonly section application_specific_ro };
+place in IRAM_MPOS  {readwrite};
+place in ERAM_region  {readwrite section application_specific_rw};
+place in STACK_region { block CSTACK, block HEAP };
+place in Config_region{section FlashConfig};

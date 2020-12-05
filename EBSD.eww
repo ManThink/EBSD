@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\project\BSC01\BSC01.ewp</path>
+        <scc>
+            <provider>Subversion</provider>
+            <projname>notused</projname>
+            <auxprojpath>notused</auxprojpath>
+        </scc>
+    </project>
+    <project>
+        <path>$WS_DIR$\project\BSE01A\BSE01A.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\project\BSE01B\BSE01B.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\project\BSE01C\BSE01C.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\project\BST0x\BST0x.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\project\ST11TA\ST11TA.ewp</path>
+        <scc>
+            <provider>Subversion</provider>
+            <projname>notused</projname>
+            <auxprojpath>notused</auxprojpath>
+        </scc>
+    </project>
+    <batchBuild />
+</workspace>

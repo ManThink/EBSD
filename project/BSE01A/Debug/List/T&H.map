@@ -1,0 +1,2023 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.1.169/W32 for ARM                  04/Dec/2020  10:12:45
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  E:\gx\project\BSE01A\Debug\Exe\T&H.out
+#    Map file     =  E:\gx\project\BSE01A\Debug\List\T&H.map
+#    Command line =  
+#        -f C:\Users\ThinkPad\AppData\Local\Temp\EW6F04.tmp
+#        (E:\gx\project\BSE01A\Debug\Obj\BSE01AHook.o --no_out_extension -o
+#        E:\gx\project\BSE01A\Debug\Exe\T&H.out --keep mpos_main --map
+#        E:\gx\project\BSE01A\Debug\List\T&H.map --config
+#        E:\SVN2.0\RDSoftware\Module\EBSD\MT_ColorBrickV1.0.icf --semihosting
+#        E:\SVN2.0\RDSoftware\Module\EBSD\lib\EBLib.a
+#        E:\SVN2.0\RDSoftware\Module\EBSD\lib\LWS429Lib.a --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+"P1":  place in [from 0x410 to 0x5bff] {
+          ro object exit.o, ro object low_level_init.o, ro object DblAddSub.o,
+          ro object DblCmpEq.o, ro object DblCmpGe.o, ro object DblCmpLe.o,
+          ro object DblDiv.o, ro object DblMul.o, ro object DblToFlt.o,
+          ro object DblToI32.o, ro object DblToI64.o, ro object FltDiv.o,
+          ro object FltToDbl.o, ro object FltToS32.o, ro object IxxToDbl.o,
+          ro object IxxToFlt.o, ro object ceil.o, ro object floor.o,
+          ro object ABImemcpy.o, ro object ABImemset.o, ro object I32DivMod.o,
+          ro object I64DivMod.o, ro object I64DivZer.o, ro object I64Mul.o,
+          ro object I64Shl.o, ro object IntDivZer.o, ro object S64Shr.o,
+          ro object U64Shr.o, ro object cexit.o, ro object cmain.o,
+          ro object copy_init3.o, ro object cstartup_M.o, ro object ata_init.o,
+          ro object uread4.o, ro object uread8.o, ro object uwrite4.o,
+          ro object uwrite8.o, ro object zero_init3.o, ro object exit.o,
+          ro object Baord.o, ro object IWdg.o, ro object I32DivModFast.o,
+          ro object FltAddSub.o, ro object data_init.o,
+          ro object interrupts_hc32l19x.o, ro object LWS_IT.o,
+          ro object LowPower.o, ro object MT_HC32L19_ADC.o,
+          ro object MT_HC32L19_Flash.o, ro object MT_HC32L19_GPIO.o,
+          ro object MT_HC32L19_LPTimer.o, ro object MT_HC32L19_LPUART.o,
+          ro object MT_HC32L19_RTC.o, ro object MT_HC32L19_SPI.o,
+          ro object MT_HC32L19_Timer.o, ro object HC32L19_sysctrl.o,
+          ro object MT_HC32L19_UART.o, ro object smc.o,
+          ro object system_hc32l19x.o, ro object systermProtect.o,
+          ro object ModeBus.o, ro object MyFlash.o, ro object MyInline.o,
+          ro object utilities.o, ro object flash_kinetisRamFunc.o };
+"P2":  place in [from 0x5c00 to 0x83ff] {
+          ro object Task.o, ro object mpos_ramfun.o, ro object timer.o,
+          ro object Global.o, ro object Global_Driver.o,
+          ro object Global_System.o, ro object Global_app.o, ro object main.o,
+          ro object MP_FUOTA.o, ro object TickS.o };
+"P3":  place in [from 0x8400 to 0xa7ff] {
+          ro object Global_Radio.o, ro object radio.o, ro object sx1280-hal.o,
+          ro object sx1280.o, ro object sx126x-board.o, ro object sx126x.o,
+          ro object sx1276-board.o, ro object sx1276.o };
+"P4":  place in [from 0xbc00 to 0x1'47ff] {
+          ro object InterFace.o, ro object LoRaChanConfig.o,
+          ro object LoRaCrypto.o, ro object LoRaMidware.o,
+          ro object ParaInitial.o, ro object aes.o, ro object lorabase.o,
+          ro object lws.o };
+"P5":  place in [from 0x1'4800 to 0x1'ffff] {
+          ro object CrcCal.o, ro object LoraDn.o, ro object MP_INT.o,
+          ro object MP_LWS.o, ro object MyAPP.o, ro object MyBoard.o,
+          ro object MyGlobal.o, ro object MyTask.o, ro object ParaParse.o,
+          ro object QueryUp.o, ro object mymain.o };
+"P6":  place in [from 0x1'4800 to 0x1'ffff] |
+                [from 0x2'0000 to 0x3'8fff] {
+          ro object MyAppHook.o, ro object BackHaulIF.o, ro object EBHook.o };
+"P8":  place in [from 0x1'4800 to 0x1'ffff] |
+                [from 0x2'0000 to 0x3'8fff] { ro };
+"P7":  place in [from 0xa800 to 0xbbff] {
+          ro data object aes.o, ro data object utilities.o,
+          ro data object LoRaChanConfig.o };
+"P10": place in [from 0x2000'0000 to 0x2000'27ff] |
+                [from 0x2000'2800 to 0x2000'2bff] |
+                [from 0x2000'2c00 to 0x2000'67ff] { rw };
+define block CSTACK with size = 5632, alignment = 8 { };
+define block HEAP with size = 1K, alignment = 8 { };
+"P12": place in [from 0x2000'6800 to 0x2000'7fff] { block CSTACK, block HEAP };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  ro data object LoRaChanConfig.o     in "P7"
+  ro data object aes.o                in "P7"
+  ro object ABImemset.o               in "P1"
+  ro object EBHook.o                  in "P6|P8"
+  ro object Global.o                  in "P2"
+  ro object Global_Driver.o           in "P2"
+  ro object Global_app.o              in "P2"
+  ro object I32DivModFast.o           in "P1"
+  ro object MP_LWS.o                  in "P5"
+  ro object MyGlobal.o                in "P5"
+  ro object ata_init.o                in "P1"
+  ro object copy_init3.o              in "P1"
+  ro object flash_kinetisRamFunc.o    in "P1"
+  ro object low_level_init.o          in "P1"
+  ro object main.o                    in "P2"
+  ro object mymain.o                  in "P5"
+  ro object smc.o                     in "P1"
+  ro object sx1276-board.o            in "P3"
+  ro object sx1276.o                  in "P3"
+  ro object sx1280-hal.o              in "P3"
+  ro object sx1280.o                  in "P3"
+  ro object zero_init3.o              in "P1"
+  ro section application_specific_ro  in "P9|P11"
+  rw section application_specific_rw  in "P9|P11"
+  section FlashConfig                 in "P13"
+
+
+  Section                 Kind         Address    Size  Object
+  -------                 ----         -------    ----  ------
+"A0":                                             0xc0
+  .intvec                 ro code          0x0    0xc0  startup_hc32l19x.o [3]
+                                        - 0xc0    0xc0
+
+"P1":                                           0x50c0
+  .text                   ro code        0x410  0x1568  ModeBus.o [3]
+  .text                   ro code       0x1978   0x2a4  systermProtect.o [3]
+  .text                   ro code       0x1c1c   0x1b4  MT_HC32L19_Timer.o [3]
+  .text                   ro code       0x1dd0   0x110  IWdg.o [3]
+  .text                   ro code       0x1ee0    0x2e  MyInline.o [3]
+  .text                   ro code       0x1f10   0x2a4  Baord.o [3]
+  .text                   ro code       0x21b4   0x1f4  utilities.o [3]
+  .text                   ro code       0x23a8    0x16  uread4.o [6]
+  .text                   ro code       0x23c0    0x14  uwrite4.o [6]
+  .text                   ro code       0x23d4   0x538  MT_HC32L19_RTC.o [3]
+  .text                   ro code       0x290c   0x518  MyFlash.o [3]
+  .text                   ro code       0x2e24    0x2a  uread8.o [6]
+  .text                   ro code       0x2e50   0x37a  HC32L19_sysctrl.o [3]
+  .text                   ro code       0x31cc   0x40c  interrupts_hc32l19x.o [3]
+  .text                   ro code       0x35d8   0x230  MT_HC32L19_GPIO.o [3]
+  .text                   ro code       0x3808   0x106  system_hc32l19x.o [3]
+  .text                   ro code       0x3910   0x354  MT_HC32L19_UART.o [3]
+  .text                   ro code       0x3c64   0x220  MT_HC32L19_LPUART.o [3]
+  .text                   ro code       0x3e84    0x9a  MT_HC32L19_SPI.o [3]
+  .text                   ro code       0x3f20   0x250  MT_HC32L19_Flash.o [3]
+  .text                   ro code       0x4170   0x1c8  MT_HC32L19_LPTimer.o [3]
+  .text                   ro code       0x4338    0x5e  I32DivMod.o [6]
+  .text                   ro code       0x4398    0x4e  ABImemcpy.o [6]
+  .text                   ro code       0x43e8   0x1ea  LWS_IT.o [3]
+  .text                   ro code       0x45d4    0x28  data_init.o [6]
+  .text                   ro code       0x45fc    0x36  IxxToFlt.o [5]
+  .text                   ro code       0x4632    0xaa  FltDiv.o [5]
+  .text                   ro code       0x46dc   0x120  FltAddSub.o [5]
+  .text                   ro code       0x47fc    0x3a  FltToS32.o [5]
+  .text                   ro code       0x4836    0xa8  I64DivMod.o [6]
+  .text                   ro code       0x48e0     0x2  IntDivZer.o [6]
+  .text                   ro code       0x48e4     0x2  I64DivZer.o [6]
+  .text                   ro code       0x48e8   0x22c  MT_HC32L19_ADC.o [3]
+  .text                   ro code       0x4b14    0x88  IxxToDbl.o [5]
+  .text                   ro code       0x4b9c   0x184  DblMul.o [5]
+  .text                   ro code       0x4d20   0x1b4  DblAddSub.o [5]
+  .text                   ro code       0x4ed4    0x62  DblToFlt.o [5]
+  .text                   ro code       0x4f38    0xf4  LowPower.o [3]
+  .text                   ro code       0x502c    0xc2  DblDiv.o [5]
+  .text                   ro code       0x50f0    0x80  DblToI64.o [5]
+  .text                   ro code       0x5170    0x58  ceil.o [5]
+  .text                   ro code       0x51c8    0x58  floor.o [5]
+  .text                   ro code       0x5220    0x52  DblToI32.o [5]
+  .text                   ro code       0x5272    0x3c  zero_init3.o [6]
+  .text                   ro code       0x52b0    0x32  I64Mul.o [6]
+  .text                   ro code       0x52e2    0x32  DblCmpLe.o [5]
+  .text                   ro code       0x5314    0x32  DblCmpGe.o [5]
+  .text                   ro code       0x5348    0x32  FltToDbl.o [5]
+  .text                   ro code       0x537a    0x30  copy_init3.o [6]
+  .rodata                 const         0x53ac    0x24  MT_HC32L19_ADC.o [3]
+  .text                   ro code       0x53d0    0x24  DblCmpEq.o [5]
+  .text                   ro code       0x53f4    0x22  S64Shr.o [6]
+  .text                   ro code       0x5418    0x22  I64Shl.o [6]
+  .text                   ro code       0x543c    0x1e  uwrite8.o [6]
+  .text                   ro code       0x545c    0x1e  U64Shr.o [6]
+  .text                   ro code       0x547c    0x1e  cmain.o [6]
+  .text                   ro code       0x549a     0x8  exit.o [4]
+  .text                   ro code       0x54a4     0xa  cexit.o [6]
+  .text                   ro code       0x54b0    0x14  exit.o [7]
+  .text                   ro code       0x54c4     0xc  cstartup_M.o [6]
+  .rodata                 const         0x54d0     0x0  zero_init3.o [6]
+  .rodata                 const         0x54d0     0x0  copy_init3.o [6]
+                                      - 0x54d0  0x50c0
+
+"P2", part 1 of 2:                              0x217c
+  .text                   ro code       0x5c00   0xdd8  MP_FUOTA.o [3]
+  .text                   ro code       0x69d8    0x90  Global_System.o [3]
+  .text                   ro code       0x6a68   0xc6c  Task.o [3]
+  .text                   ro code       0x76d4   0x3b0  timer.o [3]
+  .text                   ro code       0x7a84   0x2f8  TickS.o [3]
+                                      - 0x7d7c  0x217c
+
+Absolute sections, part 1 of 93:                  0x44
+  .ARM.__at_0x00007f00    ro code       0x7f00    0x44  main.o [3]
+                                      - 0x7f44    0x44
+
+"P2", part 2 of 2:                               0x354
+  .text                   ro code       0x7f44   0x354  mpos_ramfun.o [3]
+                                      - 0x8298   0x354
+
+"P3":                                           0x1810
+  .text                   ro code       0x8400   0xc44  radio.o [3]
+  .text                   ro code       0x9044   0x2a0  sx126x-board.o [3]
+  .text                   ro code       0x92e4   0x784  sx126x.o [3]
+  .text                   ro code       0x9a68   0x118  Global_Radio.o [3]
+  .rodata                 const         0x9b80    0x90  radio.o [3]
+                                      - 0x9c10  0x1810
+
+Absolute sections, part 2 of 93:                  0x28
+  .rodata                 const         0xa800    0x28  aes.o [3]
+                                      - 0xa828    0x28
+
+"P7":                                              0x4
+  Initializer bytes       const         0xa828     0x4  <for Absolute sections 75-1>
+                                      - 0xa82c     0x4
+
+Absolute sections, part 3 of 93:                 0x100
+  .rodata                 const         0xa840   0x100  aes.o [3]
+                                      - 0xa940   0x100
+
+Absolute sections, part 4 of 93:                  0x15
+  .rodata                 const         0xa980    0x15  LoRaChanConfig.o [3]
+                                      - 0xa995    0x15
+
+Absolute sections, part 5 of 93:                  0x10
+  .rodata                 const         0xa9a0    0x10  LoRaChanConfig.o [3]
+                                      - 0xa9b0    0x10
+
+Absolute sections, part 6 of 93:                   0xa
+  .rodata                 const         0xaa00     0xa  LoRaChanConfig.o [3]
+                                      - 0xaa0a     0xa
+
+Absolute sections, part 7 of 93:                   0x1
+  .rodata                 const         0xaa10     0x1  LoRaChanConfig.o [3]
+                                      - 0xaa11     0x1
+
+Absolute sections, part 8 of 93:                   0x4
+  .rodata                 const         0xaa20     0x4  LoRaChanConfig.o [3]
+                                      - 0xaa24     0x4
+
+Absolute sections, part 9 of 93:                  0x10
+  .rodata                 const         0xaa28    0x10  LoRaChanConfig.o [3]
+                                      - 0xaa38    0x10
+
+Absolute sections, part 10 of 93:                 0x10
+  .rodata                 const         0xaa40    0x10  LoRaChanConfig.o [3]
+                                      - 0xaa50    0x10
+
+Absolute sections, part 11 of 93:                 0x10
+  .rodata                 const         0xaa58    0x10  LoRaChanConfig.o [3]
+                                      - 0xaa68    0x10
+
+Absolute sections, part 12 of 93:                 0x40
+  .rodata                 const         0xaa70    0x40  LoRaChanConfig.o [3]
+                                      - 0xaab0    0x40
+
+Absolute sections, part 13 of 93:                 0x40
+  .rodata                 const         0xaad0    0x40  LoRaChanConfig.o [3]
+                                      - 0xab10    0x40
+
+Absolute sections, part 14 of 93:                 0x50
+  .rodata                 const         0xab20    0x50  sx126x.o [3]
+                                      - 0xab70    0x50
+
+Absolute sections, part 15 of 93:                 0x40
+  .rodata                 const         0xab80    0x40  LoRaChanConfig.o [3]
+                                      - 0xabc0    0x40
+
+Absolute sections, part 16 of 93:               0x1000
+  .rodata                 const         0xac00   0x400  aes.o [3]
+  .rodata                 const         0xb000   0x400  aes.o [3]
+  .rodata                 const         0xb400   0x400  aes.o [3]
+  .rodata                 const         0xb800   0x400  aes.o [3]
+                                      - 0xbc00  0x1000
+
+"P4":                                           0x7c0c
+  .text                   ro code       0xbc00  0x4370  lws.o [3]
+  .text                   ro code       0xff70  0x1158  InterFace.o [3]
+  .text                   ro code     0x1'10c8    0xb4  lorabase.o [3]
+  .text                   ro code     0x1'117c   0xe78  LoRaChanConfig.o [3]
+  .text                   ro code     0x1'1ff4   0x6c8  aes.o [3]
+  .text                   ro code     0x1'26bc   0x850  LoRaMidware.o [3]
+  .text                   ro code     0x1'2f0c   0x238  LoRaCrypto.o [3]
+  .text                   ro code     0x1'3144   0x6c8  ParaInitial.o [3]
+                                    - 0x1'380c  0x7c0c
+
+"P6|P8":                                         0xa10
+  .text                   ro code     0x1'4800   0x4bc  BackHaulIF.o [2]
+  .text                   ro code     0x1'4cbc   0x15c  BSE01AHook.o [1]
+  .text                   ro code     0x1'4e18   0x104  OMxGpio.o [3]
+  .text                   ro code     0x1'4f1c    0xb0  FltMul.o [5]
+  .text                   ro code     0x1'4fcc    0x28  startup_hc32l19x.o [3]
+  .iar.init_table         const       0x1'4ff4   0x1f4  - Linker created -
+  .text                   ro code     0x1'51e8    0x12  MyAppHook.o [2]
+  .text                   ro code     0x1'51fa     0x2  startup_hc32l19x.o [3]
+  .text                   ro code     0x1'51fc    0x10  ABImemset_small.o [6]
+  .text                   ro code     0x1'520c     0x2  startup_hc32l19x.o [3]
+  .text                   ro code     0x1'520e     0x2  startup_hc32l19x.o [3]
+                                    - 0x1'5210   0xa10
+
+Absolute sections, part 17 of 93:                 0x2c
+  .ARM.__at_0x000162c0    ro code     0x1'62c0    0x2c  MyBoard.o [2]
+                                    - 0x1'62ec    0x2c
+
+Absolute sections, part 18 of 93:                 0x2c
+  .ARM.__at_0x000162f0    ro code     0x1'62f0    0x2c  MyBoard.o [2]
+                                    - 0x1'631c    0x2c
+
+Absolute sections, part 19 of 93:                 0x50
+  .ARM.__at_0x00016350    ro code     0x1'6350    0x50  MyBoard.o [2]
+                                    - 0x1'63a0    0x50
+
+Absolute sections, part 20 of 93:                 0x28
+  .ARM.__at_0x000163b0    ro code     0x1'63b0    0x28  MyBoard.o [2]
+                                    - 0x1'63d8    0x28
+
+Absolute sections, part 21 of 93:                 0x6c
+  .ARM.__at_0x000163f0    ro code     0x1'63f0    0x6c  MyBoard.o [2]
+                                    - 0x1'645c    0x6c
+
+Absolute sections, part 22 of 93:                 0x2c
+  .ARM.__at_0x000164a0    ro code     0x1'64a0    0x2c  MyBoard.o [2]
+                                    - 0x1'64cc    0x2c
+
+Absolute sections, part 23 of 93:                 0xc8
+  .ARM.__at_0x00016510    ro code     0x1'6510    0xc8  MyBoard.o [2]
+                                    - 0x1'65d8    0xc8
+
+Absolute sections, part 24 of 93:                0x1ac
+  .ARM.__at_0x00018d00    ro code     0x1'8d00   0x1ac  MP_LWS.o [2]
+                                    - 0x1'8eac   0x1ac
+
+Absolute sections, part 25 of 93:                 0xc4
+  .ARM.__at_0x00019400    ro code     0x1'9400    0xc4  mymain.o [2]
+                                    - 0x1'94c4    0xc4
+
+Absolute sections, part 26 of 93:                 0x34
+  .ARM.__at_0x00019700    ro code     0x1'9700    0x34  mymain.o [2]
+                                    - 0x1'9734    0x34
+
+"P5":                                           0x3d84
+  .text                   ro code     0x1'9734  0x12a0  MyTask.o [2]
+  .text                   ro code     0x1'a9d4  0x11f8  MyAPP.o [2]
+  .text                   ro code     0x1'bbcc   0x168  MyBoard.o [2]
+  .text                   ro code     0x1'bd34   0xc1c  QueryUp.o [2]
+  .text                   ro code     0x1'c950   0x11c  CrcCal.o [2]
+  .text                   ro code     0x1'ca6c   0x32c  ParaParse.o [2]
+  .text                   ro code     0x1'cd98   0x490  LoraDn.o [2]
+  .text                   ro code     0x1'd228   0x1d0  MP_INT.o [2]
+  .rodata                 const       0x1'd3f8    0x80  MyTask.o [2]
+  .rodata                 const       0x1'd478    0x40  QueryUp.o [2]
+                                    - 0x1'd4b8  0x3d84
+
+Absolute sections, part 27 of 93:                 0x1c
+  .ARM.__at_0x20000000    zero     0x2000'0000    0x10  Global.o [3]
+  .ARM.__at_0x20000010    zero     0x2000'0010     0x4  Global.o [3]
+  .ARM.__at_0x20000014    zero     0x2000'0014     0x4  Global.o [3]
+  .ARM.__at_0x20000018    zero     0x2000'0018     0x4  Global.o [3]
+                                 - 0x2000'001c    0x1c
+
+Absolute sections, part 28 of 93:                  0x4
+  .ARM.__at_0x20000020    zero     0x2000'0020     0x4  Global.o [3]
+                                 - 0x2000'0024     0x4
+
+Absolute sections, part 29 of 93:                  0x4
+  .ARM.__at_0x20000028    zero     0x2000'0028     0x4  Global.o [3]
+                                 - 0x2000'002c     0x4
+
+Absolute sections, part 30 of 93:                  0x4
+  .ARM.__at_0x20000030    zero     0x2000'0030     0x4  Global.o [3]
+                                 - 0x2000'0034     0x4
+
+Absolute sections, part 31 of 93:                  0x4
+  .ARM.__at_0x20000038    zero     0x2000'0038     0x4  Global.o [3]
+                                 - 0x2000'003c     0x4
+
+Absolute sections, part 32 of 93:                  0x4
+  .ARM.__at_0x20000040    zero     0x2000'0040     0x4  Global.o [3]
+                                 - 0x2000'0044     0x4
+
+Absolute sections, part 33 of 93:                  0x4
+  .ARM.__at_0x20000048    zero     0x2000'0048     0x4  Global.o [3]
+                                 - 0x2000'004c     0x4
+
+Absolute sections, part 34 of 93:                 0x14
+  .ARM.__at_0x20000050    zero     0x2000'0050     0x8  Global.o [3]
+  .ARM.__at_0x20000058    zero     0x2000'0058     0x8  Global.o [3]
+  .ARM.__at_0x20000060    zero     0x2000'0060     0x4  Global.o [3]
+                                 - 0x2000'0064    0x14
+
+Absolute sections, part 35 of 93:                 0x10
+  .ARM.__at_0x20000068    zero     0x2000'0068    0x10  Global.o [3]
+                                 - 0x2000'0078    0x10
+
+Absolute sections, part 36 of 93:                  0xc
+  .ARM.__at_0x20000080    zero     0x2000'0080     0xc  Global.o [3]
+                                 - 0x2000'008c     0xc
+
+Absolute sections, part 37 of 93:                  0xc
+  .ARM.__at_0x20000090    zero     0x2000'0090     0xc  Global.o [3]
+                                 - 0x2000'009c     0xc
+
+Absolute sections, part 38 of 93:                 0x10
+  .ARM.__at_0x200000a0    zero     0x2000'00a0    0x10  Global.o [3]
+                                 - 0x2000'00b0    0x10
+
+Absolute sections, part 39 of 93:                 0x2c
+  .ARM.__at_0x200000b4    zero     0x2000'00b4    0x14  Global.o [3]
+  .ARM.__at_0x200000c8    zero     0x2000'00c8    0x18  Global.o [3]
+                                 - 0x2000'00e0    0x2c
+
+Absolute sections, part 40 of 93:                 0x24
+  .ARM.__at_0x20000118    zero     0x2000'0118    0x24  Global.o [3]
+                                 - 0x2000'013c    0x24
+
+Absolute sections, part 41 of 93:                 0x5c
+  .ARM.__at_0x20000140    zero     0x2000'0140    0x5c  Global.o [3]
+                                 - 0x2000'019c    0x5c
+
+Absolute sections, part 42 of 93:                 0x5c
+  .ARM.__at_0x20000210    zero     0x2000'0210    0x5c  Global.o [3]
+                                 - 0x2000'026c    0x5c
+
+Absolute sections, part 43 of 93:                 0x74
+  .ARM.__at_0x20000270    zero     0x2000'0270    0x74  Global.o [3]
+                                 - 0x2000'02e4    0x74
+
+Absolute sections, part 44 of 93:                0x118
+  .ARM.__at_0x200002f0    zero     0x2000'02f0   0x100  Global.o [3]
+  .ARM.__at_0x200003f0    zero     0x2000'03f0    0x18  Global.o [3]
+                                 - 0x2000'0408   0x118
+
+Absolute sections, part 45 of 93:                0x240
+  .ARM.__at_0x20000420    zero     0x2000'0420   0x240  Global.o [3]
+                                 - 0x2000'0660   0x240
+
+Absolute sections, part 46 of 93:                  0x4
+  .ARM.__at_0x20000690    zero     0x2000'0690     0x4  Global_app.o [3]
+                                 - 0x2000'0694     0x4
+
+Absolute sections, part 47 of 93:                  0x4
+  .ARM.__at_0x20000698    zero     0x2000'0698     0x4  Global_app.o [3]
+                                 - 0x2000'069c     0x4
+
+Absolute sections, part 48 of 93:                  0x4
+  .ARM.__at_0x200006a0    zero     0x2000'06a0     0x4  Global_app.o [3]
+                                 - 0x2000'06a4     0x4
+
+Absolute sections, part 49 of 93:                  0x4
+  .ARM.__at_0x200006a8    zero     0x2000'06a8     0x4  Global_app.o [3]
+                                 - 0x2000'06ac     0x4
+
+Absolute sections, part 50 of 93:                  0x8
+  .ARM.__at_0x200006b0    zero     0x2000'06b0     0x8  Global_app.o [3]
+                                 - 0x2000'06b8     0x8
+
+Absolute sections, part 51 of 93:                0x900
+  .ARM.__at_0x20000700    zero     0x2000'0700   0x100  Global_app.o [3]
+  .ARM.__at_0x20000800    zero     0x2000'0800   0x400  Global_app.o [3]
+  .ARM.__at_0x20000c00    zero     0x2000'0c00   0x400  Global_app.o [3]
+                                 - 0x2000'1000   0x900
+
+"P10":                                            0x94
+  .bss                    zero     0x2000'1000    0x48  BSE01AHook.o [1]
+  .bss                    zero     0x2000'1048    0x38  EBGlobal.o [2]
+  .bss                    zero     0x2000'1080    0x10  BSE01AHook.o [1]
+  .bss                    zero     0x2000'1090     0x1  HC32L19_sysctrl.o [3]
+                                 - 0x2000'1091    0x91
+
+Absolute sections, part 52 of 93:                 0x28
+  .ARM.__at_0x20001100    zero     0x2000'1100     0x4  Global_System.o [3]
+  .ARM.__at_0x20001104    zero     0x2000'1104     0x4  Global_System.o [3]
+  .ARM.__at_0x20001108    zero     0x2000'1108     0x4  Global_System.o [3]
+  .ARM.__at_0x2000110c    zero     0x2000'110c     0x4  Global_System.o [3]
+  .ARM.__at_0x20001110    zero     0x2000'1110     0x4  Global_System.o [3]
+  .ARM.__at_0x20001114    zero     0x2000'1114     0x4  Global_System.o [3]
+  .ARM.__at_0x20001118    zero     0x2000'1118     0xc  Global_System.o [3]
+  .ARM.__at_0x20001124    zero     0x2000'1124     0x4  Global_System.o [3]
+                                 - 0x2000'1128    0x28
+
+Absolute sections, part 53 of 93:                 0x14
+  .ARM.__at_0x2000112c    zero     0x2000'112c     0x4  Global_System.o [3]
+  .ARM.__at_0x20001130    zero     0x2000'1130     0x4  Global_System.o [3]
+  .ARM.__at_0x20001134    zero     0x2000'1134     0x4  Global_System.o [3]
+  .ARM.__at_0x20001138    zero     0x2000'1138     0x4  Global_System.o [3]
+  .ARM.__at_0x2000113c    zero     0x2000'113c     0x4  Global_System.o [3]
+                                 - 0x2000'1140    0x14
+
+Absolute sections, part 54 of 93:                 0x20
+  .ARM.__at_0x20001144    zero     0x2000'1144     0x4  Global_System.o [3]
+  .ARM.__at_0x20001148    zero     0x2000'1148     0x4  Global_System.o [3]
+  .ARM.__at_0x2000114c    zero     0x2000'114c     0x4  Global_System.o [3]
+  .ARM.__at_0x20001150    zero     0x2000'1150     0x4  Global_System.o [3]
+  .ARM.__at_0x20001154    zero     0x2000'1154     0xc  Global_System.o [3]
+  .ARM.__at_0x20001160    zero     0x2000'1160     0x4  Global_System.o [3]
+                                 - 0x2000'1164    0x20
+
+Absolute sections, part 55 of 93:                  0x1
+  .ARM.__at_0x20001178    uninit   0x2000'1178     0x1  Global_System.o [3]
+                                 - 0x2000'1179     0x1
+
+Absolute sections, part 56 of 93:                  0x1
+  .ARM.__at_0x2000117c    uninit   0x2000'117c     0x1  Global_System.o [3]
+                                 - 0x2000'117d     0x1
+
+Absolute sections, part 57 of 93:                  0x2
+  .ARM.__at_0x20001180    uninit   0x2000'1180     0x2  Global_System.o [3]
+                                 - 0x2000'1182     0x2
+
+Absolute sections, part 58 of 93:                  0x8
+  .ARM.__at_0x20001184    zero     0x2000'1184     0x4  Global_System.o [3]
+  .ARM.__at_0x20001188    zero     0x2000'1188     0x4  Global_System.o [3]
+                                 - 0x2000'118c     0x8
+
+Absolute sections, part 59 of 93:                 0x18
+  .ARM.__at_0x200011c0    zero     0x2000'11c0    0x18  Global_System.o [3]
+                                 - 0x2000'11d8    0x18
+
+Absolute sections, part 60 of 93:                 0x5c
+  .ARM.__at_0x200011e0    zero     0x2000'11e0     0x8  Global_System.o [3]
+  .ARM.__at_0x200011e8    zero     0x2000'11e8     0x8  Global_System.o [3]
+  .ARM.__at_0x200011f0    zero     0x2000'11f0     0x8  Global_System.o [3]
+  .ARM.__at_0x200011f8    zero     0x2000'11f8     0x8  Global_System.o [3]
+  .ARM.__at_0x20001200    zero     0x2000'1200     0x8  Global_System.o [3]
+  .ARM.__at_0x20001208    zero     0x2000'1208     0x8  Global_System.o [3]
+  .ARM.__at_0x20001210    zero     0x2000'1210     0x8  Global_System.o [3]
+  .ARM.__at_0x20001218    zero     0x2000'1218     0x8  Global_System.o [3]
+  .ARM.__at_0x20001220    zero     0x2000'1220     0x8  Global_System.o [3]
+  .ARM.__at_0x20001228    zero     0x2000'1228     0x8  Global_System.o [3]
+  .ARM.__at_0x20001230    zero     0x2000'1230     0xc  Global_System.o [3]
+                                 - 0x2000'123c    0x5c
+
+Absolute sections, part 61 of 93:                0x100
+  .ARM.__at_0x20001250    zero     0x2000'1250    0x10  Global_System.o [3]
+  .ARM.__at_0x20001260    zero     0x2000'1260    0xb0  Global_System.o [3]
+  .ARM.__at_0x20001310    zero     0x2000'1310    0x20  Global_System.o [3]
+  .ARM.__at_0x20001330    zero     0x2000'1330    0x20  Global_System.o [3]
+                                 - 0x2000'1350   0x100
+
+Absolute sections, part 62 of 93:                 0x60
+  .ARM.__at_0x20001360    zero     0x2000'1360    0x60  Global_System.o [3]
+                                 - 0x2000'13c0    0x60
+
+Absolute sections, part 63 of 93:                 0x60
+  .ARM.__at_0x200013f0    zero     0x2000'13f0    0x60  Global_System.o [3]
+                                 - 0x2000'1450    0x60
+
+Absolute sections, part 64 of 93:                 0xc0
+  .ARM.__at_0x20001460    zero     0x2000'1460    0xc0  Global_System.o [3]
+                                 - 0x2000'1520    0xc0
+
+Absolute sections, part 65 of 93:                 0xc0
+  .ARM.__at_0x20001524    zero     0x2000'1524    0xc0  Global_System.o [3]
+                                 - 0x2000'15e4    0xc0
+
+Absolute sections, part 66 of 93:                 0xd8
+  .ARM.__at_0x200015f0    zero     0x2000'15f0    0xd8  Global_System.o [3]
+                                 - 0x2000'16c8    0xd8
+
+Absolute sections, part 67 of 93:                0x3f8
+  .ARM.__at_0x20001700    zero     0x2000'1700   0x3f8  Global_System.o [3]
+                                 - 0x2000'1af8   0x3f8
+
+Absolute sections, part 68 of 93:                0x1f8
+  .ARM.__at_0x20001b00    zero     0x2000'1b00   0x1f8  Global_System.o [3]
+                                 - 0x2000'1cf8   0x1f8
+
+Absolute sections, part 69 of 93:                  0x4
+  .ARM.__at_0x20001d00    zero     0x2000'1d00     0x4  MP_FUOTA.o [3]
+                                 - 0x2000'1d04     0x4
+
+Absolute sections, part 70 of 93:                  0x4
+  .ARM.__at_0x20001d08    zero     0x2000'1d08     0x4  MP_FUOTA.o [3]
+                                 - 0x2000'1d0c     0x4
+
+Absolute sections, part 71 of 93:                  0x4
+  .ARM.__at_0x20001d10    zero     0x2000'1d10     0x4  MP_FUOTA.o [3]
+                                 - 0x2000'1d14     0x4
+
+Absolute sections, part 72 of 93:                  0x8
+  .ARM.__at_0x20001d18    zero     0x2000'1d18     0x8  MP_FUOTA.o [3]
+                                 - 0x2000'1d20     0x8
+
+Absolute sections, part 73 of 93:                  0xc
+  .ARM.__at_0x20001d28    zero     0x2000'1d28     0xc  MP_FUOTA.o [3]
+                                 - 0x2000'1d34     0xc
+
+Absolute sections, part 74 of 93:                0xa58
+  .ARM.__at_0x20001d38    zero     0x2000'1d38    0x20  MP_FUOTA.o [3]
+  .ARM.__at_0x20001d58    zero     0x2000'1d58    0x48  MP_FUOTA.o [3]
+  .ARM.__at_0x20001da0    zero     0x2000'1da0    0x48  MP_FUOTA.o [3]
+  .ARM.__at_0x20001de8    zero     0x2000'1de8    0x48  MP_FUOTA.o [3]
+  .ARM.__at_0x20001e30    zero     0x2000'1e30   0x100  MP_FUOTA.o [3]
+  .ARM.__at_0x20001f30    zero     0x2000'1f30    0x60  MP_FUOTA.o [3]
+  .ARM.__at_0x20001f90    zero     0x2000'1f90   0x800  MP_FUOTA.o [3]
+                                 - 0x2000'2790   0xa58
+
+Absolute sections, part 75 of 93:                  0x4
+  Absolute sections 75-1           0x2000'27f0     0x4  <Init block>
+    .data                 inited   0x2000'27f0     0x4  utilities.o [3]
+                                 - 0x2000'27f4     0x4
+
+Absolute sections, part 76 of 93:                  0x4
+  .ARM.__at_0x20002800    zero     0x2000'2800     0x4  Global_Radio.o [3]
+                                 - 0x2000'2804     0x4
+
+Absolute sections, part 77 of 93:                  0x1
+  .ARM.__at_0x20002808    uninit   0x2000'2808     0x1  Global_Radio.o [3]
+                                 - 0x2000'2809     0x1
+
+Absolute sections, part 78 of 93:                  0x2
+  .ARM.__at_0x20002810    uninit   0x2000'2810     0x2  Global_Radio.o [3]
+                                 - 0x2000'2812     0x2
+
+Absolute sections, part 79 of 93:                 0x90
+  .ARM.__at_0x20002820    zero     0x2000'2820    0x80  Global_Radio.o [3]
+  .ARM.__at_0x200028a0    zero     0x2000'28a0    0x10  Global_Radio.o [3]
+                                 - 0x2000'28b0    0x90
+
+Absolute sections, part 80 of 93:                 0x74
+  .ARM.__at_0x200028c0    zero     0x2000'28c0    0x74  Global_Radio.o [3]
+                                 - 0x2000'2934    0x74
+
+Absolute sections, part 81 of 93:                 0x18
+  .ARM.__at_0x20002c00    zero     0x2000'2c00     0x4  EBGlobal.o [2]
+  .ARM.__at_0x20002c04    zero     0x2000'2c04     0x4  EBGlobal.o [2]
+  .ARM.__at_0x20002c08    zero     0x2000'2c08     0x4  EBGlobal.o [2]
+  .ARM.__at_0x20002c0c    zero     0x2000'2c0c     0x4  EBGlobal.o [2]
+  .ARM.__at_0x20002c10    zero     0x2000'2c10     0x4  EBGlobal.o [2]
+  .ARM.__at_0x20002c14    zero     0x2000'2c14     0x4  EBGlobal.o [2]
+                                 - 0x2000'2c18    0x18
+
+Absolute sections, part 82 of 93:                  0x2
+  .ARM.__at_0x20002c30    uninit   0x2000'2c30     0x1  EBGlobal.o [2]
+  .ARM.__at_0x20002c31    uninit   0x2000'2c31     0x1  EBGlobal.o [2]
+                                 - 0x2000'2c32     0x2
+
+Absolute sections, part 83 of 93:                  0x2
+  .ARM.__at_0x20002c34    uninit   0x2000'2c34     0x2  EBGlobal.o [2]
+                                 - 0x2000'2c36     0x2
+
+Absolute sections, part 84 of 93:                  0x4
+  .ARM.__at_0x20002c38    uninit   0x2000'2c38     0x2  EBGlobal.o [2]
+  .ARM.__at_0x20002c3a    uninit   0x2000'2c3a     0x1  EBGlobal.o [2]
+  .ARM.__at_0x20002c3b    uninit   0x2000'2c3b     0x1  EBGlobal.o [2]
+                                 - 0x2000'2c3c     0x4
+
+Absolute sections, part 85 of 93:                 0x20
+  .ARM.__at_0x20002c40    zero     0x2000'2c40     0x8  EBGlobal.o [2]
+  .ARM.__at_0x20002c48    zero     0x2000'2c48     0x8  EBGlobal.o [2]
+  .ARM.__at_0x20002c50    zero     0x2000'2c50     0x8  EBGlobal.o [2]
+  .ARM.__at_0x20002c58    zero     0x2000'2c58     0x8  EBGlobal.o [2]
+                                 - 0x2000'2c60    0x20
+
+Absolute sections, part 86 of 93:                  0xc
+  .ARM.__at_0x20002c70    zero     0x2000'2c70     0xc  EBGlobal.o [2]
+                                 - 0x2000'2c7c     0xc
+
+Absolute sections, part 87 of 93:                 0x48
+  .ARM.__at_0x20002c90    zero     0x2000'2c90    0x20  EBGlobal.o [2]
+  .ARM.__at_0x20002cb0    zero     0x2000'2cb0    0x28  EBGlobal.o [2]
+                                 - 0x2000'2cd8    0x48
+
+Absolute sections, part 88 of 93:                0x1b0
+  .ARM.__at_0x20002d00    zero     0x2000'2d00    0x48  EBGlobal.o [2]
+  .ARM.__at_0x20002d48    zero     0x2000'2d48    0x48  EBGlobal.o [2]
+  .ARM.__at_0x20002d90    zero     0x2000'2d90    0x48  EBGlobal.o [2]
+  .ARM.__at_0x20002dd8    zero     0x2000'2dd8    0x48  EBGlobal.o [2]
+  .ARM.__at_0x20002e20    zero     0x2000'2e20    0x48  EBGlobal.o [2]
+  .ARM.__at_0x20002e68    zero     0x2000'2e68    0x48  EBGlobal.o [2]
+                                 - 0x2000'2eb0   0x1b0
+
+Absolute sections, part 89 of 93:                0x210
+  .ARM.__at_0x20002f40    zero     0x2000'2f40    0x80  EBGlobal.o [2]
+  .ARM.__at_0x20002fc0    zero     0x2000'2fc0   0x100  EBGlobal.o [2]
+  .ARM.__at_0x200030c0    zero     0x2000'30c0    0x90  EBGlobal.o [2]
+                                 - 0x2000'3150   0x210
+
+Absolute sections, part 90 of 93:                0x330
+  .ARM.__at_0x200031c0    zero     0x2000'31c0   0x180  EBGlobal.o [2]
+  .ARM.__at_0x20003340    zero     0x2000'3340   0x1b0  EBGlobal.o [2]
+                                 - 0x2000'34f0   0x330
+
+Absolute sections, part 91 of 93:                0x598
+  .ARM.__at_0x20003640    zero     0x2000'3640   0x598  EBGlobal.o [2]
+                                 - 0x2000'3bd8   0x598
+
+Absolute sections, part 92 of 93:                0x990
+  .ARM.__at_0x20004a80    zero     0x2000'4a80   0x980  EBGlobal.o [2]
+  .ARM.__at_0x20005400    zero     0x2000'5400    0x10  BackHaulIF.o [2]
+                                 - 0x2000'5410   0x990
+
+Absolute sections, part 93 of 93:                0x400
+  .ARM.__at_0x20005420    zero     0x2000'5420   0x400  BackHaulIF.o [2]
+                                 - 0x2000'5820   0x400
+
+"P12":                                          0x1600
+  CSTACK                           0x2000'6800  0x1600  <Block>
+    CSTACK                uninit   0x2000'6800  0x1600  <Block tail>
+                                 - 0x2000'7e00  0x1600
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+       0x54d0       0x5bff     0x730
+       0x7d7c       0x7eff     0x184
+       0x8298       0x83ff     0x168
+       0x9c10       0xa7ff     0xbf0
+       0xa82c       0xa83f      0x14
+       0xa940       0xa97f      0x40
+       0xa995       0xa99f       0xb
+       0xa9b0       0xa9ff      0x50
+       0xaa0a       0xaa0f       0x6
+       0xaa11       0xaa1f       0xf
+       0xaa24       0xaa27       0x4
+       0xaa38       0xaa3f       0x8
+       0xaa50       0xaa57       0x8
+       0xaa68       0xaa6f       0x8
+       0xaab0       0xaacf      0x20
+       0xab10       0xab1f      0x10
+       0xab70       0xab7f      0x10
+       0xabc0       0xabff      0x40
+     0x1'380c     0x1'47ff     0xff4
+     0x1'5210     0x1'62bf    0x10b0
+     0x1'62ec     0x1'62ef       0x4
+     0x1'631c     0x1'634f      0x34
+     0x1'63a0     0x1'63af      0x10
+     0x1'63d8     0x1'63ef      0x18
+     0x1'645c     0x1'649f      0x44
+     0x1'64cc     0x1'650f      0x44
+     0x1'65d8     0x1'8cff    0x2728
+     0x1'8eac     0x1'93ff     0x554
+     0x1'94c4     0x1'96ff     0x23c
+     0x1'd4b8     0x1'ffff    0x2b48
+     0x2'0000     0x3'8fff  0x1'9000
+  0x2000'001c  0x2000'001f       0x4
+  0x2000'0024  0x2000'0027       0x4
+  0x2000'002c  0x2000'002f       0x4
+  0x2000'0034  0x2000'0037       0x4
+  0x2000'003c  0x2000'003f       0x4
+  0x2000'0044  0x2000'0047       0x4
+  0x2000'004c  0x2000'004f       0x4
+  0x2000'0064  0x2000'0067       0x4
+  0x2000'0078  0x2000'007f       0x8
+  0x2000'008c  0x2000'008f       0x4
+  0x2000'009c  0x2000'009f       0x4
+  0x2000'00b0  0x2000'00b3       0x4
+  0x2000'00e0  0x2000'0117      0x38
+  0x2000'013c  0x2000'013f       0x4
+  0x2000'019c  0x2000'020f      0x74
+  0x2000'026c  0x2000'026f       0x4
+  0x2000'02e4  0x2000'02ef       0xc
+  0x2000'0408  0x2000'041f      0x18
+  0x2000'0660  0x2000'068f      0x30
+  0x2000'0694  0x2000'0697       0x4
+  0x2000'069c  0x2000'069f       0x4
+  0x2000'06a4  0x2000'06a7       0x4
+  0x2000'06ac  0x2000'06af       0x4
+  0x2000'06b8  0x2000'06ff      0x48
+  0x2000'1094  0x2000'10ff      0x6c
+  0x2000'1128  0x2000'112b       0x4
+  0x2000'1140  0x2000'1143       0x4
+  0x2000'1164  0x2000'1177      0x14
+  0x2000'1179  0x2000'117b       0x3
+  0x2000'117d  0x2000'117f       0x3
+  0x2000'1182  0x2000'1183       0x2
+  0x2000'118c  0x2000'11bf      0x34
+  0x2000'11d8  0x2000'11df       0x8
+  0x2000'123c  0x2000'124f      0x14
+  0x2000'1350  0x2000'135f      0x10
+  0x2000'13c0  0x2000'13ef      0x30
+  0x2000'1450  0x2000'145f      0x10
+  0x2000'1520  0x2000'1523       0x4
+  0x2000'15e4  0x2000'15ef       0xc
+  0x2000'16c8  0x2000'16ff      0x38
+  0x2000'1af8  0x2000'1aff       0x8
+  0x2000'1cf8  0x2000'1cff       0x8
+  0x2000'1d04  0x2000'1d07       0x4
+  0x2000'1d0c  0x2000'1d0f       0x4
+  0x2000'1d14  0x2000'1d17       0x4
+  0x2000'1d20  0x2000'1d27       0x8
+  0x2000'1d34  0x2000'1d37       0x4
+  0x2000'2790  0x2000'27ef      0x60
+  0x2000'27f4  0x2000'27ff       0xc
+  0x2000'2804  0x2000'2807       0x4
+  0x2000'2809  0x2000'280f       0x7
+  0x2000'2812  0x2000'281f       0xe
+  0x2000'28b0  0x2000'28bf      0x10
+  0x2000'2934  0x2000'2bff     0x2cc
+  0x2000'2c18  0x2000'2c2f      0x18
+  0x2000'2c32  0x2000'2c33       0x2
+  0x2000'2c36  0x2000'2c37       0x2
+  0x2000'2c3c  0x2000'2c3f       0x4
+  0x2000'2c60  0x2000'2c6f      0x10
+  0x2000'2c7c  0x2000'2c8f      0x14
+  0x2000'2cd8  0x2000'2cff      0x28
+  0x2000'2eb0  0x2000'2f3f      0x90
+  0x2000'3150  0x2000'31bf      0x70
+  0x2000'34f0  0x2000'363f     0x150
+  0x2000'3bd8  0x2000'4a7f     0xea8
+  0x2000'5410  0x2000'541f      0x10
+  0x2000'5820  0x2000'67ff     0xfe0
+  0x2000'7e00  0x2000'7fff     0x200
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    59 destination ranges, total size 0x4001:
+          0x2000'0000   0x1c
+          0x2000'0020    0x4
+          0x2000'0028    0x4
+          0x2000'0030    0x4
+          0x2000'0038    0x4
+          0x2000'0040    0x4
+          0x2000'0048    0x4
+          0x2000'0050   0x14
+          0x2000'0068   0x10
+          0x2000'0080    0xc
+          0x2000'0090    0xc
+          0x2000'00a0   0x10
+          0x2000'00b4   0x2c
+          0x2000'0118   0x24
+          0x2000'0140   0x5c
+          0x2000'0210   0x5c
+          0x2000'0270   0x74
+          0x2000'02f0  0x118
+          0x2000'0420  0x240
+          0x2000'0690    0x4
+          0x2000'0698    0x4
+          0x2000'06a0    0x4
+          0x2000'06a8    0x4
+          0x2000'06b0    0x8
+          0x2000'0700  0x900
+          0x2000'1000   0x91
+          0x2000'1100   0x28
+          0x2000'112c   0x14
+          0x2000'1144   0x20
+          0x2000'1184    0x8
+          0x2000'11c0   0x18
+          0x2000'11e0   0x5c
+          0x2000'1250  0x100
+          0x2000'1360   0x60
+          0x2000'13f0   0x60
+          0x2000'1460   0xc0
+          0x2000'1524   0xc0
+          0x2000'15f0   0xd8
+          0x2000'1700  0x3f8
+          0x2000'1b00  0x1f8
+          0x2000'1d00    0x4
+          0x2000'1d08    0x4
+          0x2000'1d10    0x4
+          0x2000'1d18    0x8
+          0x2000'1d28    0xc
+          0x2000'1d38  0xa58
+          0x2000'2800    0x4
+          0x2000'2820   0x90
+          0x2000'28c0   0x74
+          0x2000'2c00   0x18
+          0x2000'2c40   0x20
+          0x2000'2c70    0xc
+          0x2000'2c90   0x48
+          0x2000'2d00  0x1b0
+          0x2000'2f40  0x210
+          0x2000'31c0  0x330
+          0x2000'3640  0x598
+          0x2000'4a80  0x990
+          0x2000'5420  0x400
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+               0xa828    0x4
+    1 destination range, total size 0x4:
+          0x2000'27f0    0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data  ro code  ro data  rw data
+                                                       (abs)    (abs)    (abs)
+    ------                 -------  -------  -------  -------  -------  -------
+command line/config:
+    ---------------------------------------------------------------------------
+    Total:
+
+E:\gx\project\BSE01A\Debug\Obj: [1]
+    BSE01AHook.o               348                88
+    ---------------------------------------------------------------------------
+    Total:                     348                88
+
+EBLib.a: [2]
+    BackHaulIF.o             1 212                                        1 040
+    CrcCal.o                   284
+    EBGlobal.o                                    56                      5 788
+    LoraDn.o                 1 168
+    MP_INT.o                   464
+    MP_LWS.o                                              428
+    MyAPP.o                  4 600
+    MyAppHook.o                 18
+    MyBoard.o                  360                        560
+    MyTask.o                 4 768      128
+    ParaParse.o                812
+    QueryUp.o                3 100       64
+    mymain.o                                              248
+    ---------------------------------------------------------------------------
+    Total:                  16 786      192       56    1 236             6 828
+
+LWS429Lib.a: [3]
+    Baord.o                    676
+    Global.o                                                              1 364
+    Global_Radio.o             280                                          267
+    Global_System.o            144                                        2 788
+    Global_app.o                                                          2 328
+    HC32L19_sysctrl.o          890                 1
+    IWdg.o                     272
+    InterFace.o              4 440
+    LWS_IT.o                   490
+    LoRaChanConfig.o         3 704                                 292
+    LoRaCrypto.o               568
+    LoRaMidware.o            2 128
+    LowPower.o                 244
+    MP_FUOTA.o               3 544                                        2 680
+    MT_HC32L19_ADC.o           556       36
+    MT_HC32L19_Flash.o         592
+    MT_HC32L19_GPIO.o          560
+    MT_HC32L19_LPTimer.o       456
+    MT_HC32L19_LPUART.o        544
+    MT_HC32L19_RTC.o         1 336
+    MT_HC32L19_SPI.o           154
+    MT_HC32L19_Timer.o         436
+    MT_HC32L19_UART.o          852
+    ModeBus.o                5 480
+    MyFlash.o                1 304
+    MyInline.o                  46
+    OMxGpio.o                  260
+    ParaInitial.o            1 736
+    Task.o                   3 180
+    TickS.o                    760
+    aes.o                    1 736                               4 392
+    interrupts_hc32l19x.o    1 036
+    lorabase.o                 180
+    lws.o                   17 264
+    main.o                                                 68
+    mpos_ramfun.o              852
+    radio.o                  3 140      144
+    startup_hc32l19x.o         238
+    sx126x-board.o             672
+    sx126x.o                 1 924                                  80
+    system_hc32l19x.o          262
+    systermProtect.o           676
+    timer.o                    944
+    utilities.o                500        4                                   4
+    ---------------------------------------------------------------------------
+    Total:                  65 056      184        1       68    4 764    9 431
+
+dl6M_tln.a: [4]
+    exit.o                       8
+    ---------------------------------------------------------------------------
+    Total:                       8
+
+m6M_tl.a: [5]
+    DblAddSub.o                436
+    DblCmpEq.o                  36
+    DblCmpGe.o                  50
+    DblCmpLe.o                  50
+    DblDiv.o                   194
+    DblMul.o                   388
+    DblToFlt.o                  98
+    DblToI32.o                  82
+    DblToI64.o                 128
+    FltAddSub.o                288
+    FltDiv.o                   170
+    FltMul.o                   176
+    FltToDbl.o                  50
+    FltToS32.o                  58
+    IxxToDbl.o                 136
+    IxxToFlt.o                  54
+    ceil.o                      88
+    floor.o                     88
+    ---------------------------------------------------------------------------
+    Total:                   2 570
+
+rt6M_tl.a: [6]
+    ABImemcpy.o                 78
+    ABImemset_small.o           16
+    I32DivMod.o                 94
+    I64DivMod.o                168
+    I64DivZer.o                  2
+    I64Mul.o                    50
+    I64Shl.o                    34
+    IntDivZer.o                  2
+    S64Shr.o                    34
+    U64Shr.o                    30
+    cexit.o                     10
+    cmain.o                     30
+    copy_init3.o                48
+    cstartup_M.o                12
+    data_init.o                 40
+    uread4.o                    22
+    uread8.o                    42
+    uwrite4.o                   20
+    uwrite8.o                   30
+    zero_init3.o                60
+    ---------------------------------------------------------------------------
+    Total:                     822
+
+shb_l.a: [7]
+    exit.o                      20
+    ---------------------------------------------------------------------------
+    Total:                      20
+
+    Gaps                        44        2
+    Linker created                      500    5 632
+-------------------------------------------------------------------------------
+    Grand Total:            85 654      878    5 777    1 304    4 764   16 259
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base      0x1'4ff4          --   Gb  - Linker created -
+.iar.init_table$$Limit     0x1'51e8          --   Gb  - Linker created -
+?main                        0x547d         Code  Gb  cmain.o [6]
+ADC_DAC_IRQHandler           0x352d    0xc  Code  Gb  interrupts_hc32l19x.o [3]
+ADC_GetChVal                 0x49bd   0xb4  Code  Gb  MT_HC32L19_ADC.o [3]
+ADC_GetExAdValue             0x4ab9   0x2e  Code  Gb  MT_HC32L19_ADC.o [3]
+ADC_GetTempValue             0x4a89   0x2e  Code  Gb  MT_HC32L19_ADC.o [3]
+ADC_GetVoltageValue          0x4a71   0x18  Code  Gb  MT_HC32L19_ADC.o [3]
+ADC_Init                     0x4961   0x56  Code  Gb  MT_HC32L19_ADC.o [3]
+AESAUX                  0x2000'1250   0x10  Data  Gb  Global_System.o [3]
+AESKEY                  0x2000'1260   0xb0  Data  Gb  Global_System.o [3]
+AES_E123                     0xac00  0x400  Data  Lc  aes.o [3]
+AES_E2                       0xb000  0x400  Data  Lc  aes.o [3]
+AES_E3                       0xb400  0x400  Data  Lc  aes.o [3]
+AES_E4                       0xb800  0x400  Data  Lc  aes.o [3]
+AES_RCON                     0xa800   0x28  Data  Lc  aes.o [3]
+AES_S                        0xa840  0x100  Data  Lc  aes.o [3]
+ALI_ScanJoinMap            0x1'1b55   0x72  Code  Gb  LoRaChanConfig.o [3]
+ALI_checkCycles            0x1'1be9   0x40  Code  Gb  LoRaChanConfig.o [3]
+AUXLED_OFF                 0x1'bbe9   0x1c  Code  Gb  MyBoard.o [2]
+AUXLED_ON                  0x1'bbcd   0x1c  Code  Gb  MyBoard.o [2]
+AppHook_ActAfterCvt6       0x1'51f3    0x2  Code  Gb  MyAppHook.o [2]
+AppHook_ActAfterCvt7       0x1'51f5    0x2  Code  Gb  MyAppHook.o [2]
+AppHook_DealDevAck         0x1'51f7    0x4  Code  Gb  MyAppHook.o [2]
+AppHook_GetPayload         0x1'51ed    0x6  Code  Gb  MyAppHook.o [2]
+AppRunStatus            0x2000'2c90   0x20  Data  Gb  EBGlobal.o [2]
+App_ExcuteQueryTaskNow     0x1'aa0f   0x10  Code  Gb  MyAPP.o [2]
+App_Init                   0x1'abf9  0x238  Code  Gb  MyAPP.o [2]
+App_InitUartInFactory      0x1'ab7b   0x4c  Code  Gb  MyAPP.o [2]
+App_InsertLoraUpEvent      0x1'b6e5   0x84  Code  Gb  MyAPP.o [2]
+App_InsertQueryEvent       0x1'b771   0xdc  Code  Gb  MyAPP.o [2]
+App_InstallDefaultTask     0x1'b84d   0x16  Code  Gb  MyAPP.o [2]
+App_InstallUart2Task       0x1'b975   0x86  Code  Gb  MyAPP.o [2]
+App_InstallUserTask        0x1'b865   0x64  Code  Gb  MyAPP.o [2]
+App_SendModuleInfo         0x1'aa67   0x66  Code  Gb  MyAPP.o [2]
+BCD2HEX                      0x2835   0x10  Code  Gb  MT_HC32L19_RTC.o [3]
+BHBuffer                0x2000'5420  0x400  Data  Gb  BackHaulIF.o [2]
+Bandwidths                   0x8bec    0xc  Data  Gb  radio.o [3]
+BcdToHex                   0x1'bd35   0x50  Code  Gb  QueryUp.o [2]
+BllPara                 0x2000'2cb0   0x28  Data  Gb  EBGlobal.o [2]
+BllParaBuf              0x2000'4a80  0x980  Data  Gb  EBGlobal.o [2]
+Bt_M0_Run                    0x1d45    0xc  Code  Gb  MT_HC32L19_Timer.o [3]
+Buf485Clear                0x1'9735   0x1a  Code  Gb  MyTask.o [2]
+Buffer485Send              0x1'9883   0x48  Code  Gb  MyTask.o [2]
+BufferSendUART1            0x1'62c1   0x2c  Code  Gb  MyBoard.o [2]
+BufferSendUART2            0x1'62f1   0x2c  Code  Gb  MyBoard.o [2]
+BuildFrame                   0x14fd  0x46a  Code  Gb  ModeBus.o [3]
+Bytes2F                    0x1'be47   0x22  Code  Gb  QueryUp.o [2]
+Bytes2S8                   0x1'bdcb   0x7c  Code  Gb  QueryUp.o [2]
+CFReg                   0x2000'0270   0x74  Data  Gb  Global.o [3]
+CLKTRIM_IRQHandler           0x3571    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+CSTACK$$Base            0x2000'6800          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'7e00          --   Gb  - Linker created -
+CUSUM_CRC                    0x21b5   0x1a  Code  Gb  utilities.o [3]
+CalcTempBuf             0x2000'2f40   0x80  Data  Gb  EBGlobal.o [2]
+CheckAckCrc                0x1'c0a9   0xac  Code  Gb  QueryUp.o [2]
+CheckMTData                0x1'4a83   0x5c  Code  Gb  BackHaulIF.o [2]
+CheckStack                   0x199b   0x9a  Code  Gb  systermProtect.o [3]
+CheckTaskTime                0x1a35   0x6c  Code  Gb  systermProtect.o [3]
+Clock_Init                   0x20c9   0x50  Code  Gb  Baord.o [3]
+ConstOp                    0x1'be69  0x17e  Code  Gb  QueryUp.o [2]
+CrcCal                     0x1'c951   0x9a  Code  Gb  CrcCal.o [2]
+CrcCal_hook                0x1'51e9    0x4  Code  Gb  MyAppHook.o [2]
+CurrentDeviceId         0x2000'2c3a    0x1  Data  Gb  EBGlobal.o [2]
+DMAC_IRQHandler              0x3413   0x12  Code  Gb  interrupts_hc32l19x.o [3]
+DR2HSYM_osticks_eu868        0xab80   0x40  Data  Gb  LoRaChanConfig.o [3]
+DRADJUST                0x2000'11e8    0x8  Data  Gb  Global_System.o [3]
+DebugDealData                 0x58d  0xf40  Code  Gb  ModeBus.o [3]
+DelayUs                      0x1ee1   0x2e  Code  Gb  MyInline.o [3]
+EB_Hook                 0x2000'1048   0x38  Data  Gb  EBGlobal.o [2]
+EB_HookInit                0x1'4dd1   0x18  Code  Gb  BSE01AHook.o [1]
+EB_Sleep                   0x1'97d7   0x22  Code  Gb  MyTask.o [2]
+EB_Wakeup                  0x1'978f   0x48  Code  Gb  MyTask.o [2]
+EMCTest                       0x411   0x5c  Code  Gb  ModeBus.o [3]
+ENABLE_WUIN                0x1'bc05   0x32  Code  Gb  MyBoard.o [2]
+ENABLE_WUOUT               0x1'bc51   0x1c  Code  Gb  MyBoard.o [2]
+EnableNvic                   0x31cd   0x52  Code  Gb  interrupts_hc32l19x.o [3]
+EnterWFI                     0x4f9d   0x56  Code  Gb  LowPower.o [3]
+ExistOnceEvent               0x6e47   0x4e  Code  Gb  Task.o [3]
+ExitWFI                      0x4ff3   0x2a  Code  Gb  LowPower.o [3]
+Exp                        0x1'bd85   0x46  Code  Gb  QueryUp.o [2]
+FLASH_EraseSector            0x4151   0x18  Code  Gb  MT_HC32L19_Flash.o [3]
+FLASH_Initialization         0x4145    0xc  Code  Gb  MT_HC32L19_Flash.o [3]
+FLASH_ProgramLongWord        0x4169    0x8  Code  Gb  MT_HC32L19_Flash.o [3]
+FLASH_RAM_IRQHandler         0x3565    0xc  Code  Gb  interrupts_hc32l19x.o [3]
+FirstFlashSuccess       0x2000'06b0    0x8  Data  Gb  Global_app.o [3]
+Flash_FreeRead               0x2c5f   0x1c  Code  Gb  MyFlash.o [3]
+Flash_FreeReadWithBackup
+                             0x2bd5   0x8a  Code  Gb  MyFlash.o [3]
+Flash_FreeWrite              0x2bad   0x1c  Code  Gb  MyFlash.o [3]
+Flash_FreeWriteWithBackup
+                             0x2b23   0x8a  Code  Gb  MyFlash.o [3]
+Flash_Read_Byte              0x2949   0x14  Code  Lc  MyFlash.o [3]
+Flash_Read_Sector            0x29ef   0x78  Code  Lc  MyFlash.o [3]
+Flash_SizeSelect             0x290d   0x3c  Code  Gb  MyFlash.o [3]
+Flash_Write_Sector           0x295d   0x92  Code  Lc  MyFlash.o [3]
+FwReg                   0x2000'0140   0x5c  Data  Gb  Global.o [3]
+GET_WUIN                   0x1'bc37   0x1a  Code  Gb  MyBoard.o [2]
+GPIOInit                     0x1f7f   0xae  Code  Gb  Baord.o [3]
+GPIOUserInit                 0x1f31   0x4e  Code  Gb  Baord.o [3]
+GPIO_AFConfig                0x36d5   0x12  Code  Gb  MT_HC32L19_GPIO.o [3]
+GPIO_Config                  0x36f5   0x62  Code  Gb  MT_HC32L19_GPIO.o [3]
+GPIO_IT_Config               0x3789   0x44  Code  Gb  MT_HC32L19_GPIO.o [3]
+GPIO_IT_Diable               0x37cd   0x36  Code  Gb  MT_HC32L19_GPIO.o [3]
+GPIO_IntHandler              0x323d   0x62  Code  Gb  interrupts_hc32l19x.o [3]
+GPIO_PinGet                  0x3769   0x12  Code  Gb  MT_HC32L19_GPIO.o [3]
+GPIO_PinSet                  0x3757   0x12  Code  Gb  MT_HC32L19_GPIO.o [3]
+GetBit                       0x3167    0xa  Code  Gb  HC32L19_sysctrl.o [3]
+GetBuf                     0x1'c2b9   0x56  Code  Gb  QueryUp.o [2]
+GetOpCond                  0x1'bb23   0x38  Code  Gb  MyAPP.o [2]
+GetUpBuffer                0x1'c2b5    0x4  Code  Gb  QueryUp.o [2]
+HC_Adc_CfgSglChannel         0x493f   0x18  Code  Gb  MT_HC32L19_ADC.o [3]
+HC_Adc_Init                  0x48e9   0x56  Code  Gb  MT_HC32L19_ADC.o [3]
+HC_Bt_ClearAllIntFlag        0x1c25    0x2  Code  Gb  MT_HC32L19_Timer.o [3]
+HC_Bt_ClearIntFlag           0x1c1d    0x8  Code  Gb  MT_HC32L19_Timer.o [3]
+HC_Bt_M0_ARRSet              0x1ccb   0x14  Code  Gb  MT_HC32L19_Timer.o [3]
+HC_Bt_M0_Cnt16Set            0x1cc9    0x2  Code  Gb  MT_HC32L19_Timer.o [3]
+HC_Bt_M0_Run                 0x1cc5    0x2  Code  Gb  MT_HC32L19_Timer.o [3]
+HC_Bt_M0_Stop                0x1cc7    0x2  Code  Gb  MT_HC32L19_Timer.o [3]
+HC_Bt_Mode0_EnableIrq        0x1c33    0xe  Code  Gb  MT_HC32L19_Timer.o [3]
+HC_Bt_Mode0_Init             0x1c41   0x84  Code  Gb  MT_HC32L19_Timer.o [3]
+HC_Flash_Init                0x3f21   0x98  Code  Gb  MT_HC32L19_Flash.o [3]
+HC_Flash_LockAll             0x40fd    0xe  Code  Gb  MT_HC32L19_Flash.o [3]
+HC_Flash_SectorErase         0x406d   0x82  Code  Gb  MT_HC32L19_Flash.o [3]
+HC_Flash_UnlockAll           0x4111    0xe  Code  Gb  MT_HC32L19_Flash.o [3]
+HC_Flash_WriteWord           0x3fe1   0x7e  Code  Gb  MT_HC32L19_Flash.o [3]
+HC_GPIO_Map                0x1'4e19   0x54  Code  Gb  OMxGpio.o [3]
+HC_Gpio_ClearIrq             0x36ab    0x8  Code  Gb  MT_HC32L19_GPIO.o [3]
+HC_Gpio_DisableIrq           0x368d    0x6  Code  Gb  MT_HC32L19_GPIO.o [3]
+HC_Gpio_EnableIrq            0x3685    0x8  Code  Gb  MT_HC32L19_GPIO.o [3]
+HC_Gpio_GetInputIO           0x3659    0x6  Code  Gb  MT_HC32L19_GPIO.o [3]
+HC_Gpio_GetIrqPortStatus
+                             0x36a3    0x8  Code  Gb  MT_HC32L19_GPIO.o [3]
+HC_Gpio_Init                 0x35d9   0x80  Code  Gb  MT_HC32L19_GPIO.o [3]
+HC_Gpio_SetAfMode            0x3677    0xe  Code  Gb  MT_HC32L19_GPIO.o [3]
+HC_Gpio_WriteOutputIO        0x365f    0x6  Code  Gb  MT_HC32L19_GPIO.o [3]
+HC_LPUart_ClrStatus          0x3c87    0x8  Code  Gb  MT_HC32L19_LPUART.o [3]
+HC_LPUart_DisableIrq         0x3c69    0x6  Code  Gb  MT_HC32L19_LPUART.o [3]
+HC_LPUart_EnableFunc         0x3c6f    0x2  Code  Gb  MT_HC32L19_LPUART.o [3]
+HC_LPUart_EnableIrq          0x3c65    0x4  Code  Gb  MT_HC32L19_LPUART.o [3]
+HC_LPUart_GetStatus          0x3c7d    0xa  Code  Gb  MT_HC32L19_LPUART.o [3]
+HC_LPUart_Init               0x3c91   0x74  Code  Gb  MT_HC32L19_LPUART.o [3]
+HC_LPUart_Init::u32Over
+                             0x3e78    0xc  Data  Lc  MT_HC32L19_LPUART.o [3]
+HC_Lpm_GotoDeepSleep         0x4f39    0xc  Code  Gb  LowPower.o [3]
+HC_Lpm_GotoSleep             0x4f45    0xa  Code  Gb  LowPower.o [3]
+HC_Lptim_ClrItStatus         0x4189    0xa  Code  Gb  MT_HC32L19_LPTimer.o [3]
+HC_Lptim_Cmd                 0x4179    0x4  Code  Gb  MT_HC32L19_LPTimer.o [3]
+HC_Lptim_ConfIt              0x4171    0x8  Code  Gb  MT_HC32L19_LPTimer.o [3]
+HC_Lptim_GetCNT              0x4193    0x6  Code  Gb  MT_HC32L19_LPTimer.o [3]
+HC_Lptim_GetItStatus         0x417d    0xc  Code  Gb  MT_HC32L19_LPTimer.o [3]
+HC_Lptim_Init                0x41a7   0xaa  Code  Gb  MT_HC32L19_LPTimer.o [3]
+HC_Rtc_AlmIeCmd              0x2453   0x1e  Code  Gb  MT_HC32L19_RTC.o [3]
+HC_Rtc_Cmd                   0x23d5    0xa  Code  Gb  MT_HC32L19_RTC.o [3]
+HC_Rtc_CompCfg               0x2481   0x34  Code  Gb  MT_HC32L19_RTC.o [3]
+HC_Rtc_Init                  0x2579   0x48  Code  Gb  MT_HC32L19_RTC.o [3]
+HC_Rtc_ReadDateTime          0x24b5   0x58  Code  Gb  MT_HC32L19_RTC.o [3]
+HC_Rtc_SetCyc                0x2401   0x52  Code  Gb  MT_HC32L19_RTC.o [3]
+HC_Rtc_SetTime               0x2527   0x48  Code  Gb  MT_HC32L19_RTC.o [3]
+HC_Rtc_StartWait             0x23df   0x22  Code  Gb  MT_HC32L19_RTC.o [3]
+HC_Spi_Init                  0x3e85   0x24  Code  Gb  MT_HC32L19_SPI.o [3]
+HC_Spi_RWByte                0x3ea9   0x1a  Code  Gb  MT_HC32L19_SPI.o [3]
+HC_Uart_ClrIsr               0x3929    0x8  Code  Gb  MT_HC32L19_UART.o [3]
+HC_Uart_ClrStatus            0x3931    0x8  Code  Gb  MT_HC32L19_UART.o [3]
+HC_Uart_EnableFunc           0x3911    0x2  Code  Gb  MT_HC32L19_UART.o [3]
+HC_Uart_GetStatus            0x391f    0xa  Code  Gb  MT_HC32L19_UART.o [3]
+HC_Uart_Init                 0x394d   0x78  Code  Gb  MT_HC32L19_UART.o [3]
+HC_Uart_ReceiveData          0x3939    0x6  Code  Gb  MT_HC32L19_UART.o [3]
+HC_Wdt_Init                  0x1dd1   0x24  Code  Gb  IWdg.o [3]
+HEX2BCD                      0x2795   0x32  Code  Gb  MT_HC32L19_RTC.o [3]
+HOOK_EXTI0_IRQHandler   0x2000'112c    0x4  Data  Gb  Global_System.o [3]
+HOOK_EXTI1_IRQHandler   0x2000'1130    0x4  Data  Gb  Global_System.o [3]
+HOOK_EXTI3_IRQHandler   0x2000'1134    0x4  Data  Gb  Global_System.o [3]
+HOOK_EXTIWK_IRQHandler  0x2000'1138    0x4  Data  Gb  Global_System.o [3]
+HOOK_GPIO_IRQHandler    0x2000'113c    0x4  Data  Gb  Global_System.o [3]
+HOOK_LPTIM_IRQHandler   0x2000'1150    0x4  Data  Gb  Global_System.o [3]
+HOOK_RTC_IRQHandler     0x2000'114c    0x4  Data  Gb  Global_System.o [3]
+HOOK_USART1_IRQHandler  0x2000'1144    0x4  Data  Gb  Global_System.o [3]
+HOOK_USART2_IRQHandler  0x2000'1148    0x4  Data  Gb  Global_System.o [3]
+Hal_Init                     0x2141   0x38  Code  Gb  Baord.o [3]
+HardFault_Handler            0x321f   0x16  Code  Gb  interrupts_hc32l19x.o [3]
+HookAPPParaChanged      0x2000'0030    0x4  Data  Gb  Global.o [3]
+HookExcuteOnce          0x2000'1108    0x4  Data  Gb  Global_System.o [3]
+HookExcuteOnce1         0x2000'110c    0x4  Data  Gb  Global_System.o [3]
+HookExcuteOnce2         0x2000'1110    0x4  Data  Gb  Global_System.o [3]
+HookExcuteOnce3         0x2000'1114    0x4  Data  Gb  Global_System.o [3]
+HookInternalcallback    0x2000'1118    0xc  Data  Gb  Global_System.o [3]
+HookUARTUserDeal        0x2000'0014    0x4  Data  Gb  Global.o [3]
+HookUserCheck           0x2000'1160    0x4  Data  Gb  Global_System.o [3]
+Hook_Event              0x2000'0090    0xc  Data  Gb  Global.o [3]
+Hook_EventInternal      0x2000'0080    0xc  Data  Gb  Global.o [3]
+Hook_FuotaEvent_Handler
+                        0x2000'1d00    0x4  Data  Gb  MP_FUOTA.o [3]
+Hook_SendBuildFram      0x2000'0040    0x4  Data  Gb  Global.o [3]
+Hook_UARTReceive        0x2000'0010    0x4  Data  Gb  Global.o [3]
+Hook_Uart1Ack              0x1'974f   0x40  Code  Gb  MyTask.o [2]
+Hook_fuota_uart1_ack    0x2000'1d08    0x4  Data  Gb  MP_FUOTA.o [3]
+Hook_fuota_uart2_ack    0x2000'1d10    0x4  Data  Gb  MP_FUOTA.o [3]
+Hookcallback            0x2000'1154    0xc  Data  Gb  Global_System.o [3]
+I2C0_IRQHandler              0x34b3    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+I2C1_IRQHandler              0x34bb    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+IRQInit                      0x2119   0x28  Code  Gb  Baord.o [3]
+IWDG_ReloadCounter           0x1e9f   0x20  Code  Gb  IWdg.o [3]
+IWdgInit                     0x1df5   0x20  Code  Gb  IWdg.o [3]
+IWdgRst                      0x1e15   0x8a  Code  Gb  IWdg.o [3]
+IntertalEventInstall       0x1'0865   0x2e  Code  Gb  InterFace.o [3]
+IsMTCmd                    0x1'a441   0x3e  Code  Gb  MyTask.o [2]
+IsQuitBios                 0x1'9bad   0x34  Code  Gb  MyTask.o [2]
+Join                       0x1'06fd   0x44  Code  Gb  InterFace.o [3]
+JoinParaInit               0x1'19f1   0x86  Code  Gb  LoRaChanConfig.o [3]
+JoinReset                  0x1'0741   0x18  Code  Gb  InterFace.o [3]
+JoinedProcess              0x1'28e7   0x6e  Code  Gb  LoRaMidware.o [3]
+LCD_IRQHandler               0x355d    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+LD_LoraDnProcess           0x1'ce31  0x38c  Code  Gb  LoraDn.o [2]
+LD_swrxdone                0x1'cd99   0x84  Code  Gb  LoraDn.o [2]
+LORA_RXDONE_FIXUP            0xa9a0   0x10  Data  Gb  LoRaChanConfig.o [3]
+LPInfo                  0x2000'00c8   0x18  Data  Gb  Global.o [3]
+LPTIM0_1_IRQHandler          0x34db   0x14  Code  Gb  interrupts_hc32l19x.o [3]
+LPTIM_Config                 0x4251   0x82  Code  Gb  MT_HC32L19_LPTimer.o [3]
+LPTIM_SetWakeUpCounter       0x42d3   0x42  Code  Gb  MT_HC32L19_LPTimer.o [3]
+LPUART0_IRQHandler           0x3461   0x32  Code  Gb  interrupts_hc32l19x.o [3]
+LPUART1_IRQHandler           0x34a1    0x2  Code  Gb  interrupts_hc32l19x.o [3]
+LVD_IRQHandler               0x3555    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+LWInterFeedBack            0x1'00bd   0xc2  Code  Gb  InterFace.o [3]
+LWS                     0x2000'1700  0x3f8  Data  Gb  Global_System.o [3]
+LWS_ALI                 0x2000'11c0   0x18  Data  Gb  Global_System.o [3]
+LWS_GetSysTime             0x1'01a5   0x70  Code  Gb  InterFace.o [3]
+LWS_GetUPseq               0x1'022f    0x6  Code  Gb  InterFace.o [3]
+LWS_GetUTCTime             0x1'0215   0x1a  Code  Gb  InterFace.o [3]
+LWS_SWTxData                 0xf841   0x52  Code  Gb  lws.o [3]
+LWS_SetADR                 0x1'0299   0x14  Code  Gb  InterFace.o [3]
+LWS_SetBusy                  0xbc67   0x56  Code  Gb  lws.o [3]
+LWS_SetCN470               0x1'0247   0x52  Code  Gb  InterFace.o [3]
+LWS_SetDR                  0x1'023d    0xa  Code  Gb  InterFace.o [3]
+LWS_SetDeviceTimeReq       0x1'0235    0x8  Code  Gb  InterFace.o [3]
+LWS_SetLinkCheck           0x1'0339   0x38  Code  Gb  InterFace.o [3]
+LWS_SetRelay               0x1'0183   0x22  Code  Gb  InterFace.o [3]
+LWS_SetServerADR           0x1'02c9   0x12  Code  Gb  InterFace.o [3]
+LWS_checkClassA              0xfd69   0x92  Code  Gb  lws.o [3]
+LWS_checkClassB              0xfe0d   0xde  Code  Gb  lws.o [3]
+LWS_checkSW                  0xfef1   0x2a  Code  Gb  lws.o [3]
+LWS_coreProcess              0xef91  0x4b8  Code  Lc  lws.o [3]
+LWS_disableChannel_eu868
+                           0x1'12ed   0x22  Code  Gb  LoRaChanConfig.o [3]
+LWS_disableClassB            0xfa11   0x28  Code  Gb  lws.o [3]
+LWS_disableTracking          0xf6c5   0x1c  Code  Gb  lws.o [3]
+LWS_enableTracking           0xf60d   0xa6  Code  Gb  lws.o [3]
+LWS_init                     0xf479   0xb2  Code  Gb  lws.o [3]
+LWS_joinReset                0xf5a5   0x54  Code  Gb  lws.o [3]
+LWS_reset                    0xf745   0xbc  Code  Gb  lws.o [3]
+LWS_rollBackToClassA         0xfc69   0x7a  Code  Gb  lws.o [3]
+LWS_sendAlive                0xf985   0x12  Code  Gb  lws.o [3]
+LWS_setAdrMode               0xf805   0x22  Code  Gb  lws.o [3]
+LWS_setClassA                0xfbc1   0x98  Code  Gb  lws.o [3]
+LWS_setClassB                0xfb0d   0xae  Code  Gb  lws.o [3]
+LWS_setClassC                0xfa4d   0x9e  Code  Gb  lws.o [3]
+LWS_setDrTxpow               0xf827    0xe  Code  Gb  lws.o [3]
+LWS_setLinkCheckMode         0xf9f5   0x16  Code  Gb  lws.o [3]
+LWS_setPingable              0xf6f5   0x26  Code  Gb  lws.o [3]
+LWS_setSW                    0xfcf1   0x4a  Code  Gb  lws.o [3]
+LWS_setSession               0xf9a1   0x54  Code  Gb  lws.o [3]
+LWS_setTxData                0xf8ad   0xd0  Code  Gb  lws.o [3]
+LWS_setupBand_eu868        0x1'1195   0x2e  Code  Gb  LoRaChanConfig.o [3]
+LWS_setupChannel_all       0x1'1257   0x96  Code  Gb  LoRaChanConfig.o [3]
+LWS_startJoining             0xf539   0x52  Code  Gb  lws.o [3]
+LW_TxData                  0x1'0765   0xc2  Code  Gb  InterFace.o [3]
+ListTaskHead            0x2000'1104    0x4  Data  Gb  Global_System.o [3]
+LoRaBandWith                 0xab20   0x50  Data  Gb  sx126x.o [3]
+LoRaWANInit                0x1'26bd  0x11a  Code  Gb  LoRaMidware.o [3]
+LoRa_WAN_START               0x1ad9   0xc8  Code  Gb  systermProtect.o [3]
+LowPowerGPIOEnter            0x1f15   0x14  Code  Gb  Baord.o [3]
+Lptim_Cmd                    0x4199    0x2  Code  Gb  MT_HC32L19_LPTimer.o [3]
+LwsIntStatus            0x2000'0048    0x4  Data  Gb  Global.o [3]
+MPOSTimer               0x2000'1228    0x8  Data  Gb  Global_System.o [3]
+MPOS_lightWKClear            0x92e5   0x40  Code  Gb  sx126x.o [3]
+MPOS_lightWKSetCAD           0x9359   0x16  Code  Gb  sx126x.o [3]
+MPOS_lightWKSetRX            0x9325   0x16  Code  Gb  sx126x.o [3]
+MPOS_lightWKSetTX            0x933b   0x14  Code  Gb  sx126x.o [3]
+MP_EXTI3_IRQHandler          0x4425    0x2  Code  Gb  LWS_IT.o [3]
+MP_EXTIWK_IRQHandler         0x4427   0x56  Code  Gb  LWS_IT.o [3]
+MP_GPIO_IRQHandler           0x43e9   0x3c  Code  Gb  LWS_IT.o [3]
+MP_LPTMR0_IRQHandler         0x7bc1  0x100  Code  Gb  TickS.o [3]
+MP_RTC_IRQHandler            0x45d1    0x2  Code  Gb  LWS_IT.o [3]
+MP_UART1_SendBuffer          0x3af5   0x58  Code  Gb  MT_HC32L19_UART.o [3]
+MP_USART1_IRQHandler         0x447d  0x134  Code  Gb  LWS_IT.o [3]
+MTFirstFreq                  0xaad0   0x40  Data  Gb  LoRaChanConfig.o [3]
+MT_BoardInit               0x1'4cdd   0x64  Code  Gb  BSE01AHook.o [1]
+MT_Init                    0x1'4d9d   0x22  Code  Gb  BSE01AHook.o [1]
+MT_MyParaInit              0x1'4cbd   0x20  Code  Gb  BSE01AHook.o [1]
+MT_SETABSwitchIRQA         0x1'0181    0x2  Code  Gb  InterFace.o [3]
+MT_SETABSwitchIRQB         0x1'017f    0x2  Code  Gb  InterFace.o [3]
+MT_SWlenth              0x2000'06a8    0x4  Data  Gb  Global_app.o [3]
+MT_Sensor               0x2000'1080   0x10  Data  Gb  BSE01AHook.o [1]
+MT_SensorTx                0x1'4d41   0x36  Code  Gb  BSE01AHook.o [1]
+MT_SetupSensorTxTask       0x1'4d77   0x26  Code  Gb  BSE01AHook.o [1]
+MT_TaskSensorTx         0x2000'1000   0x48  Data  Gb  BSE01AHook.o [1]
+MT_WaterSensor             0x1'4dbf   0x12  Code  Gb  BSE01AHook.o [1]
+MaxTimeWithNoConf       0x2000'0028    0x4  Data  Gb  Global.o [3]
+ModBusCRC                     0x46d    0xa  Code  Gb  ModeBus.o [3]
+ModeBusTimer            0x2000'0068   0x10  Data  Gb  Global.o [3]
+MulDev_QueryStartId     0x2000'2c3b    0x1  Data  Gb  EBGlobal.o [2]
+MyBoardInit                0x1'6511   0xc8  Code  Gb  MyBoard.o [2]
+MyHookInit                 0x1'ae81   0x34  Code  Gb  MyAPP.o [2]
+MyInit                     0x1'9401   0x9a  Code  Gb  mymain.o [2]
+OMx_GpioCfg                0x1'4ead   0x1e  Code  Gb  OMxGpio.o [3]
+OMx_GpioGet                0x1'4e75   0x1e  Code  Gb  OMxGpio.o [3]
+OMx_GpioItDisable          0x1'4eeb   0x1a  Code  Gb  OMxGpio.o [3]
+OMx_GpioItEnable           0x1'4ecb   0x1e  Code  Gb  OMxGpio.o [3]
+OMx_GpioLLWUCfg            0x1'4ee9    0x2  Code  Gb  OMxGpio.o [3]
+OMx_GpioSet                0x1'4e93   0x1a  Code  Gb  OMxGpio.o [3]
+OTP_Read                     0x2df3   0x22  Code  Gb  MyFlash.o [3]
+OTP_Write                    0x2dd1   0x22  Code  Gb  MyFlash.o [3]
+OcpStatus               0x2000'2808    0x1  Data  Gb  Global_Radio.o [3]
+OnBcnRx                      0xcd05  0x15a  Code  Lc  lws.o [3]
+OnBusyProtecotorEvent        0xbcbd   0x20  Code  Gb  lws.o [3]
+OnClassBProtectorEvent       0xbc0d   0x5a  Code  Gb  lws.o [3]
+OnRadioCadDone               0xc36d   0x88  Code  Lc  lws.o [3]
+OnRadioRxDone                0xc8f5  0x22a  Code  Lc  lws.o [3]
+OnRadioRxError               0xccfd    0x8  Code  Lc  lws.o [3]
+OnRadioRxTimeout             0xcb4d  0x1a6  Code  Lc  lws.o [3]
+OnRadioTxDone                0xc225   0xcc  Code  Lc  lws.o [3]
+OnRadioTxTimeout             0xc2f9   0x6c  Code  Lc  lws.o [3]
+OnRxWindow1TimerEvent        0xc5ad   0xae  Code  Lc  lws.o [3]
+OnRxWindow2TimerEvent        0xc675   0xce  Code  Lc  lws.o [3]
+OnSWTimerEvent               0xc5a5    0x8  Code  Lc  lws.o [3]
+PCA_IRQHandler               0x3515    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+PCNT_IRQHandler              0x3539    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+PIT_Cmd                      0x1dbd   0x14  Code  Gb  MT_HC32L19_Timer.o [3]
+PIT_Config                   0x1d51   0x62  Code  Gb  MT_HC32L19_Timer.o [3]
+PIT_IRQHandler               0x7a85  0x13c  Code  Gb  TickS.o [3]
+PORTA_IRQHandler             0x329f   0xf8  Code  Gb  interrupts_hc32l19x.o [3]
+PORTB_IRQHandler             0x3397   0x50  Code  Gb  interrupts_hc32l19x.o [3]
+PORTC_E_IRQHandler           0x33e7    0x2  Code  Gb  interrupts_hc32l19x.o [3]
+PORTD_F_IRQHandler           0x33e9   0x2a  Code  Gb  interrupts_hc32l19x.o [3]
+PP_GetAppPara              0x1'ca6d   0x7a  Code  Gb  ParaParse.o [2]
+PP_GetBllPara              0x1'cae7  0x27a  Code  Gb  ParaParse.o [2]
+PTask                   0x2000'1360   0x60  Data  Gb  Global_System.o [3]
+PTaskCallback0               0x6ac5   0x2c  Code  Gb  Task.o [3]
+PTaskCallback1               0x6af1   0x32  Code  Gb  Task.o [3]
+PTaskInit                    0x6b23   0x24  Code  Gb  Task.o [3]
+PTaskInternal           0x2000'13f0   0x60  Data  Gb  Global_System.o [3]
+PTaskInternalSetCallBack
+                             0x6a6b   0x1a  Code  Gb  Task.o [3]
+PTaskInternalSetTimeout
+                             0x6a85   0x18  Code  Gb  Task.o [3]
+PTaskInternalStart           0x6a9d   0x14  Code  Gb  Task.o [3]
+PTaskInternalStop            0x6ab1   0x14  Code  Gb  Task.o [3]
+PTaskIsRuning                0x6b81    0xe  Code  Gb  Task.o [3]
+PTaskStart                   0x6b47   0x18  Code  Gb  Task.o [3]
+PTaskStop                    0x6b5f   0x22  Code  Gb  Task.o [3]
+PTaskTime               0x2000'1230    0xc  Data  Gb  Global_System.o [3]
+PTimerStop                   0x8419   0x16  Code  Gb  radio.o [3]
+PacketData                    0x477   0x3c  Code  Gb  ModeBus.o [3]
+ParaInitial                0x1'3145  0x6c8  Code  Gb  ParaInitial.o [3]
+Para_Mod                0x2000'0420  0x240  Data  Gb  Global.o [3]
+QU_CheckTag                0x1'c013   0x8e  Code  Gb  QueryUp.o [2]
+QU_Copy                    0x1'c315   0xc4  Code  Gb  QueryUp.o [2]
+QU_Cvt                     0x1'c481  0x3dc  Code  Gb  QueryUp.o [2]
+QU_CvtDataType             0x1'c26d   0x48  Code  Gb  QueryUp.o [2]
+QU_DealDevAck              0x1'c865   0xbe  Code  Gb  QueryUp.o [2]
+QU_GetPayload              0x1'c15d   0x54  Code  Gb  QueryUp.o [2]
+QU_UpdateUptpmlt           0x1'c1b1   0xbc  Code  Gb  QueryUp.o [2]
+QU_getIndx                 0x1'bfe7   0x10  Code  Gb  QueryUp.o [2]
+QU_getSrcCRC               0x1'bff7   0x1c  Code  Gb  QueryUp.o [2]
+QueryTaskPara           0x2000'30c0   0x90  Data  Gb  EBGlobal.o [2]
+RTC_ConvertDatetimeToSeconds
+                             0x2721   0x74  Code  Gb  MT_HC32L19_RTC.o [3]
+RTC_ConvertSecondsToDatetime
+                             0x2645   0xdc  Code  Gb  MT_HC32L19_RTC.o [3]
+RTC_GetDatetime              0x2845   0x48  Code  Gb  MT_HC32L19_RTC.o [3]
+RTC_GetSencond               0x288d   0x12  Code  Gb  MT_HC32L19_RTC.o [3]
+RTC_IRQHandler               0x3525    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+RTC_Init                     0x25c9   0x6c  Code  Gb  MT_HC32L19_RTC.o [3]
+RTC_SetAlarm                 0x28a5    0x2  Code  Gb  MT_HC32L19_RTC.o [3]
+RTC_SetDatetime              0x27c7   0x6e  Code  Gb  MT_HC32L19_RTC.o [3]
+RTC_SetSencond               0x28a7    0x8  Code  Gb  MT_HC32L19_RTC.o [3]
+RTC_SetUTCSecond             0x289f    0x6  Code  Gb  MT_HC32L19_RTC.o [3]
+RUNLED_BLINK               0x1'64a1   0x2c  Code  Gb  MyBoard.o [2]
+Radio                   0x2000'28c0   0x74  Data  Gb  Global_Radio.o [3]
+RadioAUX                     0x20b7    0x2  Code  Gb  Baord.o [3]
+RadioCheckRfFrequency        0x8855    0x4  Code  Gb  radio.o [3]
+RadioGetStatus               0x8475   0x1e  Code  Gb  radio.o [3]
+RadioGetWakeupTime           0x8cfd    0x4  Code  Gb  radio.o [3]
+RadioInit                    0x8443   0x32  Code  Gb  radio.o [3]
+RadioIoInit                  0x202d   0x8a  Code  Gb  Baord.o [3]
+RadioIrqProcess              0x8f69   0xb4  Code  Gb  radio.o [3]
+RadioIsChannelFree           0x84df   0x5e  Code  Gb  radio.o [3]
+RadioIsRxRunning             0x8493   0x20  Code  Gb  radio.o [3]
+RadioLoRaSymbTime            0x9b80   0x90  Data  Gb  radio.o [3]
+RadioOnRxTimeoutIrq          0x8d05   0x18  Code  Gb  radio.o [3]
+RadioPhy                0x2000'2800    0x4  Data  Gb  Global_Radio.o [3]
+RadioPublicNetwork      0x2000'2810    0x2  Data  Gb  Global_Radio.o [3]
+RadioRandom                  0x853d   0x2a  Code  Gb  radio.o [3]
+RadioRead                    0x8c75    0x8  Code  Gb  radio.o [3]
+RadioReadBuffer              0x8c85    0x8  Code  Gb  radio.o [3]
+RadioRssi                    0x8c65    0x8  Code  Gb  radio.o [3]
+RadioRunPara            0x2000'28a0   0x10  Data  Gb  Global_Radio.o [3]
+RadioRx                      0x8a9f   0x20  Code  Gb  radio.o [3]
+RadioRxBoosted               0x8abf   0x20  Code  Gb  radio.o [3]
+RadioRxConfig                0xffc9   0x5e  Code  Gb  InterFace.o [3]
+RadioRxMode                  0x842f   0x14  Code  Gb  radio.o [3]
+RadioRxSetINT                0x8a6d   0x32  Code  Lc  radio.o [3]
+RadioSend                    0x8961   0x84  Code  Gb  radio.o [3]
+RadioSetChannel              0x84c5   0x1a  Code  Gb  radio.o [3]
+RadioSetMaxPayloadLength
+                             0x8c8d   0x46  Code  Gb  radio.o [3]
+RadioSetModem                0x84b3   0x12  Code  Gb  radio.o [3]
+RadioSetPublicNetwork        0x8cd3   0x26  Code  Gb  radio.o [3]
+RadioSetRx                   0x8a19   0x54  Code  Gb  radio.o [3]
+RadioSetRxConfig             0x85a9  0x162  Code  Gb  radio.o [3]
+RadioSetRxDutyCycle          0x8af5    0x8  Code  Gb  radio.o [3]
+RadioSetTxConfig             0x8725  0x108  Code  Gb  radio.o [3]
+RadioSetTxContinuousWave
+                             0x8c25   0x2e  Code  Gb  radio.o [3]
+RadioSetpublicNetwork        0x8401   0x18  Code  Gb  radio.o [3]
+RadioSleep                   0x89e9   0x22  Code  Gb  radio.o [3]
+RadioStandby                 0x8a0f    0xa  Code  Gb  radio.o [3]
+RadioStartCad                0x8afd   0xec  Code  Gb  radio.o [3]
+RadioTimeOnAir               0x8859  0x108  Code  Gb  radio.o [3]
+RadioTx                      0x8bf9   0x2c  Code  Gb  radio.o [3]
+RadioTxConfig                0xff71   0x58  Code  Gb  InterFace.o [3]
+RadioWKUP                    0x8589   0x1e  Code  Gb  radio.o [3]
+RadioWrite                   0x8c6d    0x8  Code  Gb  radio.o [3]
+RadioWriteBuffer             0x8c7d    0x8  Code  Gb  radio.o [3]
+Radio_sysInit                0x9a69  0x118  Code  Gb  Global_Radio.o [3]
+Radiosymboltime              0x8567   0x22  Code  Gb  radio.o [3]
+RamFunInit                   0x7f45  0x354  Code  Gb  mpos_ramfun.o [3]
+RdReg                   0x2000'0210   0x5c  Data  Gb  Global.o [3]
+ReadEBPara                   0x2d27   0x4a  Code  Gb  MyFlash.o [3]
+ReadLWPara                   0x2c81   0x4e  Code  Gb  MyFlash.o [3]
+Region$$Table$$Base        0x1'4ff4          --   Gb  - Linker created -
+Region$$Table$$Limit       0x1'51e8          --   Gb  - Linker created -
+RemoveEvent                0x1'c3dd   0x58  Code  Gb  QueryUp.o [2]
+Reset_RstPeripheral0         0x3171    0x4  Code  Gb  HC32L19_sysctrl.o [3]
+RestartQueryTask           0x1'a109   0x4c  Code  Gb  MyTask.o [2]
+RunParaShadow           0x2000'2c70    0xc  Data  Gb  EBGlobal.o [2]
+RunStatus               0x2000'00b4   0x14  Data  Gb  Global.o [3]
+RxGNEvent                    0xc759  0x168  Code  Lc  lws.o [3]
+SENSITIVITY                  0xa980   0x15  Data  Gb  LoRaChanConfig.o [3]
+SPI0_Cmd                     0x3f1d    0x2  Code  Gb  MT_HC32L19_SPI.o [3]
+SPI0_IRQHandler              0x34a3    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+SPI1_IRQHandler              0x34ab    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+SPI_writeBuffer              0x1ba1   0x38  Code  Gb  systermProtect.o [3]
+SWInterFeedBack            0x1'002f   0x8e  Code  Gb  InterFace.o [3]
+SX126xCalibrateImage         0x96a3   0x54  Code  Gb  sx126x.o [3]
+SX126xCheckDeviceReady       0x9447   0x1e  Code  Gb  sx126x.o [3]
+SX126xClearIrqStatus         0x9a55   0x14  Code  Gb  sx126x.o [3]
+SX126xGetIrqStatus           0x973d   0x18  Code  Gb  sx126x.o [3]
+SX126xGetOperatingMode       0x9441    0x6  Code  Gb  sx126x.o [3]
+SX126xGetPaSelect            0x92e1    0x4  Code  Gb  sx126x-board.o [3]
+SX126xGetPacketType          0x97d1    0x6  Code  Gb  sx126x.o [3]
+SX126xGetPayload             0x9473   0x2c  Code  Gb  sx126x.o [3]
+SX126xGetRssiInst            0x999d   0x18  Code  Gb  sx126x.o [3]
+SX126xGetRxBufferStatus
+                             0x99b5   0x36  Code  Gb  sx126x.o [3]
+SX126xInit                   0x9419    0x8  Code  Gb  sx126x.o [3]
+SX126xIoInit                 0x9087    0x8  Code  Gb  sx126x-board.o [3]
+SX126xIoIrqInit              0x906b   0x1c  Code  Gb  sx126x-board.o [3]
+SX126xKickRadioDog           0x9421   0x20  Code  Gb  sx126x.o [3]
+SX126xLoRaSingleRxTimeOut
+                             0x8d1d   0x2e  Code  Gb  radio.o [3]
+SX126xOnTimeoutIrq           0x8d65   0xd0  Code  Gb  radio.o [3]
+SX126xParaInit               0x936f   0xaa  Code  Gb  sx126x.o [3]
+SX126xReadBuffer             0x9277   0x24  Code  Gb  sx126x-board.o [3]
+SX126xReadCommand            0x916d   0x20  Code  Gb  sx126x-board.o [3]
+SX126xReadRegister           0x9227   0x10  Code  Gb  sx126x-board.o [3]
+SX126xReadRegisters          0x91f9   0x2e  Code  Gb  sx126x-board.o [3]
+SX126xReset                  0x908f   0x32  Code  Gb  sx126x-board.o [3]
+SX126xRxERRORunning          0x8f03   0x48  Code  Gb  radio.o [3]
+SX126xRxRunning              0x8e81   0x82  Code  Gb  radio.o [3]
+SX126xSetAntSw               0x9045   0x26  Code  Gb  sx126x-board.o [3]
+SX126xSetBufferBaseAddress
+                             0x9989   0x14  Code  Gb  sx126x.o [3]
+SX126xSetCad                 0x9629   0x30  Code  Gb  sx126x.o [3]
+SX126xSetDio3AsTcxoCtrl
+                             0x9755   0x1c  Code  Gb  sx126x.o [3]
+SX126xSetDioIrqParams        0x9715   0x28  Code  Gb  sx126x.o [3]
+SX126xSetLoRaSymbNumTimeout
+                             0x9687    0xe  Code  Gb  sx126x.o [3]
+SX126xSetModem               0x94b3    0xe  Code  Gb  sx126x.o [3]
+SX126xSetModulationParams
+                             0x9875   0x6a  Code  Gb  sx126x.o [3]
+SX126xSetPaConfig            0x96fd   0x18  Code  Gb  sx126x.o [3]
+SX126xSetPacketParams        0x98df   0x8c  Code  Gb  sx126x.o [3]
+SX126xSetPacketType          0x97b1    0xa  Code  Gb  sx126x.o [3]
+SX126xSetPayload             0x9465    0xe  Code  Gb  sx126x.o [3]
+SX126xSetRegulatorMode       0x9695    0xe  Code  Gb  sx126x.o [3]
+SX126xSetRfFrequency         0x9771   0x40  Code  Gb  sx126x.o [3]
+SX126xSetRfTxPower           0x9517    0xa  Code  Gb  sx126x.o [3]
+SX126xSetRx                  0x9565   0x3e  Code  Gb  sx126x.o [3]
+SX126xSetRxBoosted           0x95ab   0x40  Code  Gb  sx126x.o [3]
+SX126xSetRxDutyCycle         0x95f1   0x26  Code  Gb  sx126x.o [3]
+SX126xSetSleep               0x94c1   0x24  Code  Gb  sx126x.o [3]
+SX126xSetStandby             0x94e5   0x32  Code  Gb  sx126x.o [3]
+SX126xSetStopRxTimerOnPreambleDetect
+                             0x9679    0xe  Code  Gb  sx126x.o [3]
+SX126xSetSyncWord            0x949f   0x12  Code  Gb  sx126x.o [3]
+SX126xSetTx                  0x9521   0x34  Code  Gb  sx126x.o [3]
+SX126xSetTxContinuousWave
+                             0x9665   0x14  Code  Gb  sx126x.o [3]
+SX126xSetTxParams            0x97e1   0x90  Code  Gb  sx126x.o [3]
+SX126xSetWhiteningSeed       0x94b1    0x2  Code  Gb  sx126x.o [3]
+SX126xTxRunning              0x8e35   0x48  Code  Gb  radio.o [3]
+SX126xUPDatePacketStatus
+                             0x99eb   0x4e  Code  Gb  sx126x.o [3]
+SX126xWaitOnBusy             0x90c1   0x1a  Code  Gb  sx126x-board.o [3]
+SX126xWakeup                 0x90db   0x44  Code  Gb  sx126x-board.o [3]
+SX126xWriteBuffer            0x9237   0x40  Code  Gb  sx126x-board.o [3]
+SX126xWriteCommand           0x911f   0x4e  Code  Gb  sx126x-board.o [3]
+SX126xWriteRegister          0x91ed    0xc  Code  Gb  sx126x-board.o [3]
+SX126xWriteRegisters         0x9195   0x46  Code  Gb  sx126x-board.o [3]
+SX126x_phy              0x2000'2820   0x80  Data  Gb  Global_Radio.o [3]
+SaveKeyJoined              0x1'27d7  0x110  Code  Gb  LoRaMidware.o [3]
+SecondCounter           0x2000'1200    0x8  Data  Gb  Global_System.o [3]
+SecondStopValue         0x2000'1208    0x8  Data  Gb  Global_System.o [3]
+SerialSem               0x2000'2c38    0x2  Data  Gb  EBGlobal.o [2]
+SerialSemProtect           0x1'98cb   0x2c  Code  Gb  MyTask.o [2]
+SetAUX                       0x1f11    0x4  Code  Gb  Baord.o [3]
+SetBit                       0x3151   0x16  Code  Gb  HC32L19_sysctrl.o [3]
+SetClassMode               0x1'0631   0xc8  Code  Gb  InterFace.o [3]
+SetCrc                     0x1'c9f1   0x7c  Code  Gb  CrcCal.o [2]
+SetOpCond                  0x1'bb61   0x26  Code  Gb  MyAPP.o [2]
+Spi0InOut                    0x3f09    0xc  Code  Gb  MT_HC32L19_SPI.o [3]
+Spi0_Init                    0x3eeb    0xa  Code  Gb  MT_HC32L19_SPI.o [3]
+SpiInOut                     0x3ef5   0x14  Code  Gb  MT_HC32L19_SPI.o [3]
+Spi_Init                     0x3ec3   0x28  Code  Gb  MT_HC32L19_SPI.o [3]
+StackEventToDo          0x2000'0018    0x4  Data  Gb  Global.o [3]
+StackFunction           0x2000'03f0   0x18  Data  Gb  Global.o [3]
+SysParaInit                  0x6fe5   0xda  Code  Gb  Task.o [3]
+SysStatus               0x2000'0000   0x10  Data  Gb  Global.o [3]
+SysTick_Handler              0x3235    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+SysTime                 0x2000'00a0   0x10  Data  Gb  Global.o [3]
+SysTimeRxDone           0x2000'0050    0x8  Data  Gb  Global.o [3]
+Sysctrl_ClkSourceEnable
+                             0x2e51  0x106  Code  Gb  HC32L19_sysctrl.o [3]
+Sysctrl_GetHClkFreq          0x2f81   0xde  Code  Gb  HC32L19_sysctrl.o [3]
+Sysctrl_GetPClkFreq          0x3065   0x12  Code  Gb  HC32L19_sysctrl.o [3]
+Sysctrl_SetHCLKDiv           0x30c9   0x18  Code  Gb  HC32L19_sysctrl.o [3]
+Sysctrl_SetPCLKDiv           0x30e9   0x18  Code  Gb  HC32L19_sysctrl.o [3]
+Sysctrl_SetPeripheralGate
+                             0x3109   0x38  Code  Gb  HC32L19_sysctrl.o [3]
+Sysctrl_SetRCHTrim           0x3085   0x12  Code  Gb  HC32L19_sysctrl.o [3]
+Sysctrl_SetRCLTrim           0x30a9   0x14  Code  Gb  HC32L19_sysctrl.o [3]
+Sysctrl_SysClkSwitch         0x2f57   0x22  Code  Gb  HC32L19_sysctrl.o [3]
+SystemClock_Config           0x1f29    0x8  Code  Gb  Baord.o [3]
+SystemCoreClock         0x2000'1188    0x4  Data  Gb  Global_System.o [3]
+SystemCoreClockUpdate        0x3809    0xc  Code  Gb  system_hc32l19x.o [3]
+SystemInit                   0x3815   0xb8  Code  Gb  system_hc32l19x.o [3]
+SystemStart                  0x712d  0x562  Code  Gb  Task.o [3]
+TIM0_IRQHandler              0x34c3    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+TIM1_IRQHandler              0x34cb    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+TIM2_IRQHandler              0x34d3    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+TIM3_IRQHandler              0x3425   0x12  Code  Gb  interrupts_hc32l19x.o [3]
+TIM4_IRQHandler              0x34fd    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+TIM5_IRQHandler              0x3505    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+TIM6_IRQHandler              0x350d    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+TRadioParas             0x2000'0118   0x24  Data  Gb  Global.o [3]
+TXPOWLEVELS                  0xaa28   0x10  Data  Gb  LoRaChanConfig.o [3]
+TXPOWLEVELS_ALI              0xaa40   0x10  Data  Gb  LoRaChanConfig.o [3]
+TaskExcuteNow                0x6db9    0xa  Code  Gb  Task.o [3]
+TaskFunc_FrameOver         0x1'a4c1  0x4e4  Code  Gb  MyTask.o [2]
+TaskFunc_LoraTx            0x1'9dc5  0x30e  Code  Gb  MyTask.o [2]
+TaskFunc_Mornitor          0x1'9bf1  0x180  Code  Gb  MyTask.o [2]
+TaskFunc_QueryData         0x1'a191  0x280  Code  Gb  MyTask.o [2]
+TaskInstallWithInit        0x1'a9d5   0x3a  Code  Gb  MyAPP.o [2]
+TaskOnceEvent                0x6e99   0xe2  Code  Gb  Task.o [3]
+TaskPreSleep                 0x6d95   0x1e  Code  Gb  Task.o [3]
+TaskRemove                   0x6cc9   0x2a  Code  Gb  Task.o [3]
+TaskRestart                  0x6cbf    0xa  Code  Gb  Task.o [3]
+TaskRun                      0x6dc9   0x60  Code  Gb  Task.o [3]
+TaskSetPeriod                0x6bfd   0x28  Code  Gb  Task.o [3]
+TaskSetup                    0x6cf3   0x36  Code  Gb  Task.o [3]
+TaskSleep                    0x6c25   0x22  Code  Gb  Task.o [3]
+TaskStop                     0x6dc3    0x6  Code  Gb  Task.o [3]
+TaskWakeUP                   0x6e29   0x1e  Code  Gb  Task.o [3]
+Task_expired                 0x6d31   0x5c  Code  Gb  Task.o [3]
+Task_sem_init                0x6b8f   0x34  Code  Gb  Task.o [3]
+Task_sem_release             0x6bc3   0x3a  Code  Gb  Task.o [3]
+Task_sem_waitOne             0x6c47   0x78  Code  Gb  Task.o [3]
+TimeWithNoModeConf      0x2000'0020    0x4  Data  Gb  Global.o [3]
+TimeoutCntValue         0x2000'1220    0x8  Data  Gb  Global_System.o [3]
+TimerDelayCounter       0x2000'11f8    0x8  Data  Gb  Global_System.o [3]
+TimerTickCounter        0x2000'1210    0x8  Data  Gb  Global_System.o [3]
+TimerTickCounterContext
+                        0x2000'1218    0x8  Data  Gb  Global_System.o [3]
+UART0_2_IRQHandler           0x3437   0x18  Code  Gb  interrupts_hc32l19x.o [3]
+UART1_3_IRQHandler           0x3455    0xc  Code  Gb  interrupts_hc32l19x.o [3]
+UART1_Init                   0x39c5   0xa0  Code  Gb  MT_HC32L19_UART.o [3]
+UART1_SendBuffer             0x3b4d   0x14  Code  Gb  MT_HC32L19_UART.o [3]
+UART1_SendDec                0x3bb9   0x8a  Code  Gb  MT_HC32L19_UART.o [3]
+UART1_SendString             0x3c43   0x1a  Code  Gb  MT_HC32L19_UART.o [3]
+UART1_Sendhex                0x3b75   0x44  Code  Gb  MT_HC32L19_UART.o [3]
+UART2_Init                   0x3db7    0xc  Code  Gb  MT_HC32L19_LPUART.o [3]
+UART2_Init2                  0x3d05   0xb2  Code  Gb  MT_HC32L19_LPUART.o [3]
+UART2_SendBuffer             0x3e19   0x58  Code  Gb  MT_HC32L19_LPUART.o [3]
+USART1_SendByte              0x3a65   0x90  Code  Gb  MT_HC32L19_UART.o [3]
+USART2_SendByte              0x3dc3   0x56  Code  Gb  MT_HC32L19_LPUART.o [3]
+UartBusiness            0x2000'3640  0x598  Data  Gb  EBGlobal.o [2]
+Uart_ClrStatus               0x393f    0x8  Code  Gb  MT_HC32L19_UART.o [3]
+Uart_EnableIrq               0x3947    0x4  Code  Gb  MT_HC32L19_UART.o [3]
+UserAppPara             0x2000'2c00    0x4  Data  Gb  EBGlobal.o [2]
+VC0_IRQHandler               0x3541    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+VC1_2_IRQHandler             0x3549    0xc  Code  Gb  interrupts_hc32l19x.o [3]
+WDT_IRQHandler               0x351d    0x8  Code  Gb  interrupts_hc32l19x.o [3]
+WUOUT_0                    0x1'bc81   0x12  Code  Gb  MyBoard.o [2]
+WUOUT_1                    0x1'bc6d   0x14  Code  Gb  MyBoard.o [2]
+WriteEBPara                  0x2d75   0x4a  Code  Gb  MyFlash.o [3]
+WriteLWPara                  0x2cd9   0x4e  Code  Gb  MyFlash.o [3]
+_DR2RPS_CRC_kr923            0xaa10    0x1  Data  Gb  LoRaChanConfig.o [3]
+_DR2RPS_CRC_sx1280           0xaa00    0xa  Data  Gb  LoRaChanConfig.o [3]
+_M456M                       0x1aa1   0x38  Code  Gb  systermProtect.o [3]
+__aeabi_cdcmpeq              0x53d1         Code  Gb  DblCmpEq.o [5]
+__aeabi_cdcmple              0x52e3         Code  Gb  DblCmpLe.o [5]
+__aeabi_cdrcmple             0x5315         Code  Gb  DblCmpGe.o [5]
+__aeabi_d2f                  0x4ed5         Code  Gb  DblToFlt.o [5]
+__aeabi_d2iz                 0x5221         Code  Gb  DblToI32.o [5]
+__aeabi_d2lz                 0x50f1         Code  Gb  DblToI64.o [5]
+__aeabi_d2uiz                0x5245         Code  Gb  DblToI32.o [5]
+__aeabi_d2ulz                0x511d         Code  Gb  DblToI64.o [5]
+__aeabi_dadd                 0x4d21         Code  Gb  DblAddSub.o [5]
+__aeabi_ddiv                 0x502d         Code  Gb  DblDiv.o [5]
+__aeabi_dmul                 0x4b9d         Code  Gb  DblMul.o [5]
+__aeabi_dsub                 0x4de7         Code  Gb  DblAddSub.o [5]
+__aeabi_f2d                  0x5349         Code  Gb  FltToDbl.o [5]
+__aeabi_f2iz                 0x47fd         Code  Gb  FltToS32.o [5]
+__aeabi_fadd                 0x46dd         Code  Gb  FltAddSub.o [5]
+__aeabi_fdiv                 0x4633         Code  Gb  FltDiv.o [5]
+__aeabi_fmul               0x1'4f1d         Code  Gb  FltMul.o [5]
+__aeabi_fsub                 0x474d         Code  Gb  FltAddSub.o [5]
+__aeabi_i2d                  0x4b89         Code  Gb  IxxToDbl.o [5]
+__aeabi_i2f                  0x461d         Code  Gb  IxxToFlt.o [5]
+__aeabi_idiv0                0x48e1         Code  Gb  IntDivZer.o [6]
+__aeabi_l2d                  0x4b15         Code  Gb  IxxToDbl.o [5]
+__aeabi_lasr                 0x53f5         Code  Gb  S64Shr.o [6]
+__aeabi_ldiv0                0x48e5         Code  Gb  I64DivZer.o [6]
+__aeabi_ldivmod              0x4837         Code  Gb  I64DivMod.o [6]
+__aeabi_llsl                 0x5419         Code  Gb  I64Shl.o [6]
+__aeabi_llsr                 0x545d         Code  Gb  U64Shr.o [6]
+__aeabi_lmul                 0x52b1         Code  Gb  I64Mul.o [6]
+__aeabi_memcpy               0x43cd         Code  Gb  ABImemcpy.o [6]
+__aeabi_memcpy4              0x4399         Code  Gb  ABImemcpy.o [6]
+__aeabi_memcpy8              0x4399         Code  Gb  ABImemcpy.o [6]
+__aeabi_ui2d                 0x4b69         Code  Gb  IxxToDbl.o [5]
+__aeabi_ui2f                 0x45fd         Code  Gb  IxxToFlt.o [5]
+__aeabi_ul2d                 0x4b2f         Code  Gb  IxxToDbl.o [5]
+__aeabi_uldivmod             0x4875         Code  Gb  I64DivMod.o [6]
+__aeabi_uread4               0x23a9         Code  Gb  uread4.o [6]
+__aeabi_uread8               0x2e25         Code  Gb  uread8.o [6]
+__aeabi_uwrite4              0x23c1         Code  Gb  uwrite4.o [6]
+__aeabi_uwrite8              0x543d         Code  Gb  uwrite8.o [6]
+__cmain                      0x547d         Code  Gb  cmain.o [6]
+__exit                       0x54b1   0x14  Code  Gb  exit.o [7]
+__iar_Memcpy                 0x43d9         Code  Gb  ABImemcpy.o [6]
+__iar_ceil64                 0x5171         Code  Gb  ceil.o [5]
+__iar_copy_init3             0x537b   0x30  Code  Gb  copy_init3.o [6]
+__iar_d2uiz                  0x5249         Code  Gb  DblToI32.o [5]
+__iar_data_init3             0x45d5   0x28  Code  Gb  data_init.o [6]
+__iar_floor64                0x51c9         Code  Gb  floor.o [5]
+__iar_program_start          0x54c5         Code  Gb  cstartup_M.o [6]
+__iar_small_Memset4_word
+                           0x1'5201         Code  Gb  ABImemset_small.o [6]
+__iar_small_Memset_word
+                           0x1'5201         Code  Gb  ABImemset_small.o [6]
+__iar_small_idiv             0x4339         Code  Gb  I32DivMod.o [6]
+__iar_small_idivmod          0x4339         Code  Gb  I32DivMod.o [6]
+__iar_small_memclr         0x1'51fd         Code  Gb  ABImemset_small.o [6]
+__iar_small_memclr4        0x1'51fd         Code  Gb  ABImemset_small.o [6]
+__iar_small_memclr8        0x1'51fd         Code  Gb  ABImemset_small.o [6]
+__iar_small_memset         0x1'5201         Code  Gb  ABImemset_small.o [6]
+__iar_small_memset4        0x1'5201         Code  Gb  ABImemset_small.o [6]
+__iar_small_memset8        0x1'5201         Code  Gb  ABImemset_small.o [6]
+__iar_small_uidiv            0x4361         Code  Gb  I32DivMod.o [6]
+__iar_small_uidivmod         0x4361         Code  Gb  I32DivMod.o [6]
+__iar_zero_init3             0x5273   0x3c  Code  Gb  zero_init3.o [6]
+__low_level_init             0x38fd   0x12  Code  Gb  system_hc32l19x.o [3]
+__vector_table                  0x0         Data  Gb  startup_hc32l19x.o [3]
+_call_main                   0x5489         Code  Gb  cmain.o [6]
+_exit                        0x54a5         Code  Gb  cexit.o [6]
+_main                        0x5497         Code  Gb  cmain.o [6]
+aes_appendMic              0x1'2fbd   0x36  Code  Gb  LoRaCrypto.o [3]
+aes_appendMic0             0x1'2ff3   0x26  Code  Gb  LoRaCrypto.o [3]
+aes_cipher                 0x1'3067   0x68  Code  Gb  LoRaCrypto.o [3]
+aes_encrypt                0x1'3049   0x1e  Code  Gb  LoRaCrypto.o [3]
+aes_sessKeys               0x1'30cf   0x60  Code  Gb  LoRaCrypto.o [3]
+aes_verifyMic              0x1'2f7d   0x40  Code  Gb  LoRaCrypto.o [3]
+aes_verifyMic0             0x1'3019   0x30  Code  Gb  LoRaCrypto.o [3]
+aesroundkeys               0x1'1ff5   0x8e  Code  Lc  aes.o [3]
+aliFirstFreq                 0xaa70   0x40  Data  Gb  LoRaChanConfig.o [3]
+aos_post                     0x6a69    0x2  Code  Gb  Task.o [3]
+appBH_4GREQUTC             0x1'486d   0x48  Code  Gb  BackHaulIF.o [2]
+appBH_4GRsetPinSet         0x1'4801   0x20  Code  Gb  BackHaulIF.o [2]
+appBH_4Gconfig             0x1'48b5   0x90  Code  Gb  BackHaulIF.o [2]
+appBH_4Ginit               0x1'4945   0x74  Code  Gb  BackHaulIF.o [2]
+appBH_Hook_SendBuildFram
+                           0x1'4a81    0x2  Code  Gb  BackHaulIF.o [2]
+appBH_Hook_fuota_ack       0x1'4a5d   0x1a  Code  Gb  BackHaulIF.o [2]
+appBH_Tx                   0x1'49c1   0x9a  Code  Gb  BackHaulIF.o [2]
+appBH_dn                   0x1'4b21  0x162  Code  Gb  BackHaulIF.o [2]
+appBH_packetBuild          0x1'4821   0x4c  Code  Gb  BackHaulIF.o [2]
+appEventLWS                0x1'8d01  0x17c  Code  Gb  MP_LWS.o [2]
+appPara                 0x2000'02f0  0x100  Data  Gb  Global.o [3]
+app_AuxBlink               0x1'b02d   0x3a  Code  Gb  MyAPP.o [2]
+app_EventExuteNow          0x1'b8f1   0x72  Code  Gb  MyAPP.o [2]
+app_FrameOver_Restart      0x1'aa1f   0x18  Code  Gb  MyAPP.o [2]
+app_FuotaEventHandle       0x1'b075   0x20  Code  Gb  MyAPP.o [2]
+app_GetPeriodSeconds       0x1'b4cb   0x34  Code  Gb  MyAPP.o [2]
+app_GetSendTime            0x1'b421   0xaa  Code  Gb  MyAPP.o [2]
+app_HookAPPParaChanged     0x1'b3b5   0x44  Code  Gb  MyAPP.o [2]
+app_HookLoRaBuildPacket
+                           0x1'ba0d   0xa4  Code  Gb  MyAPP.o [2]
+app_Hook_fuota_uart_ack
+                           0x1'aacd   0xae  Code  Gb  MyAPP.o [2]
+app_KeyDeal                0x1'af4d   0xb0  Code  Gb  MyAPP.o [2]
+app_LoRaTxIns              0x1'bab9   0x6a  Code  Gb  MyAPP.o [2]
+app_PreLoRaTx              0x1'9a45   0xfc  Code  Gb  MyTask.o [2]
+app_RUNBlink               0x1'aec1   0x10  Code  Gb  MyAPP.o [2]
+app_RunAllTask             0x1'aee9   0x44  Code  Gb  MyAPP.o [2]
+app_StackCheck             0x1'9901  0x114  Code  Gb  MyTask.o [2]
+app_USART2_IRQHandler      0x1'd32f   0x56  Code  Gb  MP_INT.o [2]
+app_UartUserDeal           0x1'b105  0x2a6  Code  Gb  MyAPP.o [2]
+app_WKIRQ                  0x1'd229  0x106  Code  Gb  MP_INT.o [2]
+app_getnextTaskTime        0x1'b6a5   0x2a  Code  Gb  MyAPP.o [2]
+bDacPeriBac             0x2000'1090    0x1  Data  Lc  HC32L19_sysctrl.o [3]
+basic_Flash_Read             0x2a67   0x3e  Code  Lc  MyFlash.o [3]
+basic_Flash_Write            0x2aa5   0x7e  Code  Gb  MyFlash.o [3]
+buildDataFrame               0xde7d  0x44a  Code  Lc  lws.o [3]
+calcAirTime                  0xbd23   0xc4  Code  Gb  lws.o [3]
+calcBcnRxWindowFromMillis
+                             0xbeb9   0x84  Code  Lc  lws.o [3]
+calcRxWindow                 0xbde7   0xc4  Code  Lc  lws.o [3]
+ceil                         0x5171         Code  Gb  ceil.o [5]
+ceill                        0x5171         Code  Gb  ceil.o [5]
+convFreq_all               0x1'130f   0x3e  Code  Gb  LoRaChanConfig.o [3]
+crc8_ccit                    0x22f1   0x36  Code  Gb  utilities.o [3]
+ddl_memclr                   0x31b9   0x12  Code  Gb  HC32L19_sysctrl.o [3]
+decDR                      0x1'1137   0x10  Code  Gb  lorabase.o [3]
+decodeBeacon                 0xcf91  0x174  Code  Lc  lws.o [3]
+decodeFrame                  0xd145  0xd10  Code  Lc  lws.o [3]
+defaultCHCNT            0x2000'1178    0x1  Data  Gb  Global_System.o [3]
+disableInterrupts            0x1979    0xc  Code  Gb  systermProtect.o [3]
+dndr2rps                   0x1'1117    0xe  Code  Gb  lorabase.o [3]
+dr2hsym                    0x1'117d    0xc  Code  Gb  LoRaChanConfig.o [3]
+eb_controlpower            0x1'6351   0x50  Code  Gb  MyBoard.o [2]
+eb_controlpowerInit        0x1'63b1   0x28  Code  Gb  MyBoard.o [2]
+emctestfreq             0x2000'06a0    0x4  Data  Gb  Global_app.o [3]
+enableInterrupts             0x1985   0x16  Code  Gb  systermProtect.o [3]
+eventBuffer             0x2000'0700  0x100  Data  Gb  Global_app.o [3]
+exit                         0x549b    0x8  Code  Gb  exit.o [4]
+flashbuffer             0x2000'0800  0x400  Data  Gb  Global_app.o [3]
+floor                        0x51c9         Code  Gb  floor.o [5]
+floorl                       0x51c9         Code  Gb  floor.o [5]
+getBw                      0x1'10cf    0xa  Code  Gb  lorabase.o [3]
+getCr                      0x1'10d9    0xa  Code  Gb  lorabase.o [3]
+getIh                      0x1'10ff    0x4  Code  Gb  lorabase.o [3]
+getNocrc                   0x1'10ed    0x6  Code  Gb  lorabase.o [3]
+getSensitivity               0xbd05   0x1e  Code  Gb  lws.o [3]
+getSf                      0x1'10c9    0x6  Code  Gb  lorabase.o [3]
+getSleepCounts               0x6f81   0x5c  Code  Gb  Task.o [3]
+globalRand              0x2000'1180    0x2  Data  Gb  Global_System.o [3]
+incDR                      0x1'1125   0x12  Code  Gb  lorabase.o [3]
+initDefaultChannels_all
+                           0x1'11c3   0x94  Code  Gb  LoRaChanConfig.o [3]
+initJoinLoop_all           0x1'19a9   0x3a  Code  Gb  LoRaChanConfig.o [3]
+intInstallStatus        0x2000'1184    0x4  Data  Gb  Global_System.o [3]
+interruptInstall             0x3579   0x3a  Code  Gb  interrupts_hc32l19x.o [3]
+loadEventBuffer            0x1'0827   0x1c  Code  Gb  InterFace.o [3]
+loadInternalEventBuffer
+                           0x1'0843   0x14  Code  Gb  InterFace.o [3]
+lowerDR                    0x1'1169   0x14  Code  Gb  lorabase.o [3]
+lwsIntPara              0x2000'0058    0x8  Data  Gb  Global.o [3]
+lws_ClassBPingRx             0xed39   0xde  Code  Lc  lws.o [3]
+lws_low_rxschedInit          0xbf61   0xc2  Code  Lc  lws.o [3]
+lws_low_rxschedNext          0xc031   0x8e  Code  Lc  lws.o [3]
+lws_startRxPing              0xee25   0xa0  Code  Lc  lws.o [3]
+lwsvar                  0x2000'1b00  0x1f8  Data  Gb  Global_System.o [3]
+main                         0x7f01   0x44  Code  Gb  main.o [3]
+mapChannels_ali            0x1'13a5   0xf8  Code  Gb  LoRaChanConfig.o [3]
+mapChannels_cn920          0x1'134d    0x4  Code  Gb  LoRaChanConfig.o [3]
+mapChannels_eu868          0x1'1351   0x42  Code  Gb  LoRaChanConfig.o [3]
+maxEIRP                      0xaa58   0x10  Data  Gb  LoRaChanConfig.o [3]
+maxFrameLens                 0xaa20    0x4  Data  Gb  LoRaChanConfig.o [3]
+memcpy1                      0x21ff   0x14  Code  Gb  utilities.o [3]
+memset1                      0x2213   0x12  Code  Gb  utilities.o [3]
+micB0                      0x1'2f31   0x42  Code  Gb  LoRaCrypto.o [3]
+mp_controlbits          0x2000'0060    0x4  Data  Gb  Global.o [3]
+mp_fotaVersionCheck          0x6399  0x1e8  Code  Gb  MP_FUOTA.o [3]
+mp_fota_ANSBuffer       0x2000'1d38   0x20  Data  Gb  MP_FUOTA.o [3]
+mp_fotabuffer           0x2000'1f90  0x800  Data  Gb  MP_FUOTA.o [3]
+mp_fotalostbit          0x2000'1e30  0x100  Data  Gb  MP_FUOTA.o [3]
+mp_fotasessions         0x2000'1f30   0x60  Data  Gb  MP_FUOTA.o [3]
+mp_fuota_checkPacketInt
+                             0x62b9   0xa8  Code  Gb  MP_FUOTA.o [3]
+mp_fuota_checkTaskInstall
+                             0x6277   0x34  Code  Gb  MP_FUOTA.o [3]
+mp_fuota_decodeframe         0x65a5  0x3f8  Code  Gb  MP_FUOTA.o [3]
+mp_fuota_init                0x61f9   0x7e  Code  Gb  MP_FUOTA.o [3]
+mp_fuota_restartInfo         0x5cdb   0x50  Code  Gb  MP_FUOTA.o [3]
+mp_fuota_sessionClear        0x5c01   0x60  Code  Gb  MP_FUOTA.o [3]
+mp_fuota_status         0x2000'11f0    0x8  Data  Gb  Global_System.o [3]
+mp_fuota_task_packetREQ
+                        0x2000'1de8   0x48  Data  Gb  MP_FUOTA.o [3]
+mp_fuota_task_para      0x2000'1d18    0x8  Data  Gb  MP_FUOTA.o [3]
+mp_fuota_task_randomtx  0x2000'1d58   0x48  Data  Gb  MP_FUOTA.o [3]
+mp_fuota_task_timeout   0x2000'1da0   0x48  Data  Gb  MP_FUOTA.o [3]
+mp_fuota_txtask_Install
+                             0x5c61   0x7a  Code  Gb  MP_FUOTA.o [3]
+mp_interrupt_loop       0x2000'0038    0x4  Data  Gb  Global.o [3]
+mp_modeACRC                  0x2327   0x2c  Code  Gb  utilities.o [3]
+mp_modeBCRC                  0x2353   0x32  Code  Gb  utilities.o [3]
+mp_nowTask              0x2000'1100    0x4  Data  Gb  Global_System.o [3]
+mp_os_getTime                0x76d5    0x8  Code  Gb  timer.o [3]
+mp_randomlwtx           0x2000'1d28    0xc  Data  Gb  MP_FUOTA.o [3]
+mp_taskF_randomlwtx          0x6199   0x48  Code  Gb  MP_FUOTA.o [3]
+mp_task_fuota_packetREQ
+                             0x5dad  0x3d0  Code  Gb  MP_FUOTA.o [3]
+mp_task_fuota_timeout        0x5d2b   0x40  Code  Gb  MP_FUOTA.o [3]
+mp_threadExists              0x796f   0x18  Code  Gb  timer.o [3]
+mp_threadGetValue            0x79d5    0x8  Code  Gb  timer.o [3]
+mp_threadHwGetElapsedTime
+                             0x7d39   0x1a  Code  Gb  TickS.o [3]
+mp_threadHwGetMinimumTimeout
+                             0x7cc1    0xc  Code  Gb  TickS.o [3]
+mp_threadHwGetTimerValue
+                             0x7d53    0x6  Code  Gb  TickS.o [3]
+mp_threadHwStart             0x7ccd   0x5c  Code  Gb  TickS.o [3]
+mp_threadInit                0x76f9   0x1c  Code  Gb  timer.o [3]
+mp_threadInsertNewHead       0x782f   0x2c  Code  Lc  timer.o [3]
+mp_threadIrqHandler          0x785b   0x72  Code  Gb  timer.o [3]
+mp_threadRestart             0x79b7   0x1e  Code  Gb  timer.o [3]
+mp_threadSetTimeout          0x79dd   0x10  Code  Lc  timer.o [3]
+mp_threadSetValue            0x798d   0x2a  Code  Gb  timer.o [3]
+mp_threadStart               0x7715  0x11a  Code  Gb  timer.o [3]
+mp_threadStop                0x78cd   0xa2  Code  Gb  timer.o [3]
+mp_thread_busyProtector
+                        0x2000'1330   0x20  Data  Gb  Global_System.o [3]
+mp_ticks2ms                  0x76dd    0x8  Code  Gb  timer.o [3]
+mp_ticks2us                  0x76e5    0x4  Code  Gb  timer.o [3]
+mp_timer_expired             0x7a23   0x30  Code  Gb  timer.o [3]
+mp_timer_lefttime            0x7a53   0x12  Code  Gb  timer.o [3]
+mp_timer_mannualExpired
+                             0x7a65   0x1c  Code  Gb  timer.o [3]
+mp_timer_restart             0x7a19    0x2  Code  Gb  timer.o [3]
+mp_timer_set                 0x79ed   0x26  Code  Gb  timer.o [3]
+mp_userInit             0x2000'1124    0x4  Data  Gb  Global_System.o [3]
+mp_utctime_differ       0x2000'11e0    0x8  Data  Gb  Global_System.o [3]
+mpos_InitStart          0x2000'0698    0x4  Data  Gb  Global_app.o [3]
+mpos_driver             0x2000'1460   0xc0  Data  Gb  Global_System.o [3]
+mpos_lws                0x2000'15f0   0xd8  Data  Gb  Global_System.o [3]
+mpos_main                  0x1'9701   0x34  Code  Gb  mymain.o [2]
+mpos_osfun              0x2000'1524   0xc0  Data  Gb  Global_System.o [3]
+mpos_sysInit                 0x69d9   0x90  Code  Gb  Global_System.o [3]
+mt_HeartTicks           0x2000'2c34    0x2  Data  Gb  EBGlobal.o [2]
+mt_OpCond               0x2000'2c50    0x8  Data  Gb  EBGlobal.o [2]
+mt_TaskAuxLedOFF        0x2000'2e20   0x48  Data  Gb  EBGlobal.o [2]
+mt_TaskBios             0x2000'2d90   0x48  Data  Gb  EBGlobal.o [2]
+mt_TaskQuery            0x2000'2d00   0x48  Data  Gb  EBGlobal.o [2]
+mt_TaskRunLedBlink      0x2000'2dd8   0x48  Data  Gb  EBGlobal.o [2]
+mt_TaskUp               0x2000'2d48   0x48  Data  Gb  EBGlobal.o [2]
+mt_TaskWakeupTimeout    0x2000'2e68   0x48  Data  Gb  EBGlobal.o [2]
+mt_dtu_resetAfterLWT    0x2000'2c30    0x1  Data  Gb  EBGlobal.o [2]
+mt_eb_runpara           0x2000'2c58    0x8  Data  Gb  EBGlobal.o [2]
+mt_keyCounter           0x2000'2c48    0x8  Data  Gb  EBGlobal.o [2]
+mt_keyTicks             0x2000'2c40    0x8  Data  Gb  EBGlobal.o [2]
+mt_query_event          0x2000'3340  0x1b0  Data  Gb  EBGlobal.o [2]
+mt_query_event_header   0x2000'2c08    0x4  Data  Gb  EBGlobal.o [2]
+mt_query_event_random   0x2000'2c14    0x4  Data  Gb  EBGlobal.o [2]
+mt_sensordata           0x2000'2fc0  0x100  Data  Gb  EBGlobal.o [2]
+mt_uart2                0x2000'2c31    0x1  Data  Gb  EBGlobal.o [2]
+mt_up_event             0x2000'31c0  0x180  Data  Gb  EBGlobal.o [2]
+mt_up_event_header      0x2000'2c04    0x4  Data  Gb  EBGlobal.o [2]
+mt_up_event_heart       0x2000'2c10    0x4  Data  Gb  EBGlobal.o [2]
+mt_up_event_random      0x2000'2c0c    0x4  Data  Gb  EBGlobal.o [2]
+next                    0x2000'27f0    0x4  Data  Lc  utilities.o [3]
+nextJoinState_ALI          0x1'1c4d  0x198  Code  Gb  LoRaChanConfig.o [3]
+nextJoinState_eu868        0x1'1a85   0xbc  Code  Gb  LoRaChanConfig.o [3]
+nextTx_eu868               0x1'16c5  0x1b6  Code  Gb  LoRaChanConfig.o [3]
+notifyAPP                     0x4b3   0xaa  Code  Gb  ModeBus.o [3]
+onEvent                    0x1'08e1  0x79c  Code  Gb  InterFace.o [3]
+os_aes                     0x1'2089  0x628  Code  Gb  aes.o [3]
+os_crc16                     0x2385    0xa  Code  Gb  utilities.o [3]
+os_getArtEui               0x1'2f0d    0xc  Code  Gb  LoRaCrypto.o [3]
+os_getDevEui               0x1'2f19    0xc  Code  Gb  LoRaCrypto.o [3]
+os_getDevKey               0x1'2f25    0xc  Code  Gb  LoRaCrypto.o [3]
+os_radio                   0x1'29bd  0x528  Code  Gb  LoRaMidware.o [3]
+os_rlsbf2                    0x2225    0xa  Code  Gb  utilities.o [3]
+os_rlsbf4                    0x222f   0x16  Code  Gb  utilities.o [3]
+os_rlsbf8                    0x2245   0x32  Code  Gb  utilities.o [3]
+os_rmsbf4                    0x2277   0x16  Code  Gb  utilities.o [3]
+os_sleep                0x2000'0690    0x4  Data  Gb  Global_app.o [3]
+os_wlsbf2                    0x228d    0x8  Code  Gb  utilities.o [3]
+os_wlsbf3                    0x2295    0xc  Code  Gb  utilities.o [3]
+os_wlsbf4                    0x22a1   0x10  Code  Gb  utilities.o [3]
+os_wlsbf8                    0x22b1   0x24  Code  Gb  utilities.o [3]
+os_wmsbf3                    0x22d5    0xc  Code  Gb  utilities.o [3]
+os_wmsbf4                    0x22e1   0x10  Code  Gb  utilities.o [3]
+para4G                  0x2000'5400   0x10  Data  Gb  BackHaulIF.o [2]
+paraAPPFlashSave           0x1'03d5   0x22  Code  Gb  InterFace.o [3]
+paraAPPGet                 0x1'03c9    0xc  Code  Gb  InterFace.o [3]
+paraAPPSave                0x1'03f7   0x46  Code  Gb  InterFace.o [3]
+paraCFGet                  0x1'03b9    0xc  Code  Gb  InterFace.o [3]
+paraCFSave                 0x1'04d9   0x70  Code  Gb  InterFace.o [3]
+paraCFmodify               0x1'0555   0xc6  Code  Gb  InterFace.o [3]
+paraFWGet                  0x1'03a1    0xc  Code  Gb  InterFace.o [3]
+paraFWSave                 0x1'0441   0x42  Code  Gb  InterFace.o [3]
+paraFWSetAPPEUI            0x1'0375    0x8  Code  Gb  InterFace.o [3]
+paraFWSetDevKey            0x1'0397    0xa  Code  Gb  InterFace.o [3]
+paraRDGet                  0x1'03ad    0xc  Code  Gb  InterFace.o [3]
+paraRDSave                 0x1'048d   0x40  Code  Gb  InterFace.o [3]
+paraRDSetChannelMap        0x1'038f    0x8  Code  Gb  InterFace.o [3]
+paraRDSetFreq              0x1'037d   0x12  Code  Gb  InterFace.o [3]
+pow2dBm                    0x1'1189    0xc  Code  Gb  LoRaChanConfig.o [3]
+powerOff485                0x1'bc9d   0x80  Code  Gb  MyBoard.o [2]
+powerOn485                 0x1'63f1   0x6c  Code  Gb  MyBoard.o [2]
+processBeacon                0xe9e9  0x1da  Code  Lc  lws.o [3]
+processDnData                0xe751  0x260  Code  Lc  lws.o [3]
+processJoinAccept            0xe2f5  0x3bc  Code  Lc  lws.o [3]
+processPingRx                0xe6cd   0x1e  Code  Lc  lws.o [3]
+pu32PcgTimer4M               0x3fb8   0x20  Data  Gb  MT_HC32L19_Flash.o [3]
+queEventInsert             0x1'b60d   0x92  Code  Gb  MyAPP.o [2]
+queEventRemove             0x1'b5d9   0x34  Code  Gb  MyAPP.o [2]
+queGetEvent                0x1'aa53   0x14  Code  Gb  MyAPP.o [2]
+queGetEventNO              0x1'aa37   0x1c  Code  Gb  MyAPP.o [2]
+queGetNextTxtime           0x1'b50d   0xac  Code  Gb  MyAPP.o [2]
+radioSleepForConfig        0x1'2955    0xe  Code  Gb  LoRaMidware.o [3]
+radio_rand1                  0xbcdd   0x28  Code  Gb  lws.o [3]
+rand                         0x21cf   0x1a  Code  Gb  utilities.o [3]
+randr                        0x21e9   0x16  Code  Gb  utilities.o [3]
+regionPara              0x2000'1310   0x20  Data  Gb  Global_System.o [3]
+release485                 0x1'9821   0x62  Code  Gb  MyTask.o [2]
+reportEvent                  0xbc01    0xc  Code  Lc  lws.o [3]
+rndDelay                     0xc0bf   0x40  Code  Gb  lws.o [3]
+runReset                     0xc175   0x12  Code  Lc  lws.o [3]
+scanCycles              0x2000'117c    0x1  Data  Gb  Global_System.o [3]
+setBcnRxParams_all         0x1'189d   0x82  Code  Gb  LoRaChanConfig.o [3]
+setCr                      0x1'10e3    0xa  Code  Gb  lorabase.o [3]
+setDrJoin                    0xc141    0x6  Code  Gb  lws.o [3]
+setDrTxpow                   0xc147   0x22  Code  Lc  lws.o [3]
+setIh                      0x1'1103    0xa  Code  Gb  lorabase.o [3]
+setNocrc                   0x1'10f3    0xc  Code  Gb  lorabase.o [3]
+setRx1Params_all           0x1'192d   0x78  Code  Gb  LoRaChanConfig.o [3]
+standardInit               0x1'1e05  0x16e  Code  Gb  LoRaChanConfig.o [3]
+startJoining                 0xebc9    0xa  Code  Lc  lws.o [3]
+startRxBcn                   0xec4d   0xdc  Code  Lc  lws.o [3]
+startRxClassC                0xebd3   0x64  Code  Gb  lws.o [3]
+startRxSW                    0xc42d  0x16a  Code  Gb  lws.o [3]
+stateJustJoined              0xce81   0xfe  Code  Lc  lws.o [3]
+txDelay                      0xc109   0x38  Code  Lc  lws.o [3]
+txDone                       0xc187   0x7e  Code  Lc  lws.o [3]
+updatTxPara                  0xeed5   0x8c  Code  Lc  lws.o [3]
+updateTx_ALI               0x1'1555  0x14a  Code  Gb  LoRaChanConfig.o [3]
+updateTx_eu868             0x1'14b1   0x90  Code  Gb  LoRaChanConfig.o [3]
+updr2rps                   0x1'110d    0xa  Code  Gb  lorabase.o [3]
+use485                     0x1'97f9   0x28  Code  Gb  MyTask.o [2]
+validDR                    0x1'1147   0x14  Code  Gb  lorabase.o [3]
+virtualEnterWFI              0x4f5d   0x40  Code  Gb  LowPower.o [3]
+xbuffer                 0x2000'0c00  0x400  Data  Gb  Global_app.o [3]
+
+
+[1] = E:\gx\project\BSE01A\Debug\Obj
+[2] = EBLib.a
+[3] = LWS429Lib.a
+[4] = dl6M_tln.a
+[5] = m6M_tl.a
+[6] = rt6M_tl.a
+[7] = shb_l.a
+
+  85 654 bytes of readonly  code memory (+ 1 304  absolute)
+     878 bytes of readonly  data memory (+ 4 764  absolute)
+   5 777 bytes of readwrite data memory (+ 16 259 absolute)
+
+Errors: none
+Warnings: none
