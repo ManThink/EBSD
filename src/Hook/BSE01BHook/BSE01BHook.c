@@ -25,7 +25,7 @@ void MT_MyParaInit()
 {
       MT_Sensor.MPRegister.Command=0x82;
       MT_Sensor.MPRegister.InforFormat=0x21;
-      MT_Sensor.MPRegister.MType=0x1A;
+      MT_Sensor.MPRegister.MType=0x15;
       MT_Sensor.MPRegister.AlarmStatus.Bits.Sht20Status=0;
       MT_Sensor.MPRegister.AlarmStatus.Bits.Ds18b20Status=0;
       MT_Sensor.MPRegister.AlarmStatus.Bits.AccStatus=0;
@@ -66,7 +66,7 @@ void MT_SensorTx(void *task,void *p)
     MT_Sensor.MPRegister.RSSI = RunStatus.Varible.RSSI;                                               //The signal RSSI of module
     MT_Sensor.MPRegister.SNR = RunStatus.Varible.SNR;                                                 //The signal SNR of module                                             //Test 3 axis acceleration by LIS2DH12
     mpos_lws.LW_TxData((unsigned char*)(MT_Sensor.Bytes),INFOR_LEN,SENSOR_PORT, LWOP_LTC); 
-    void MT_PowerOFF(); 
+    MT_PowerOFF(); 
 }
 void MT_SetupSensorTxTask(s8_t period) //period:ms
 {

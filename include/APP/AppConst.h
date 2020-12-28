@@ -32,10 +32,10 @@
 
 #define  UPMASKBITS	128
 
-#define SECTION_LEN 224		//设置参数超过256个字节时，需要使用段+偏移地址的方式读写参数。参数在flash中的实际位置=section*SECTION_LEN+reg_addr;
+#define SECTION_LEN 224		//When the setting parameter exceeds 256 bytes, it is necessary to read and write the parameter in the way of segment + offset address. Actual position of parameter in flash = section * section_ LEN+reg_ addr;
 
-#define	DNDES_DEV 0 //下行数据流向DTU下面的设备
-#define DNDES_DTU	1	//下行数据流向DTU
+#define	DNDES_DEV 0 //The downlink data flows to the devices under the DTU
+#define DNDES_DTU	1	//Downstream data flow to DTU
 
 #define UPDES_LTC	0
 #define UPDES_LTU	1
@@ -47,13 +47,13 @@
 #define TIME_UNIT_DAY    3
 
 #define OPERATOR_MASK   0x1F
-#define OPERATOR_MULTI  0 //乘
-#define OPERATOR_DIV	1 //除
-#define OPERATOR_ADD	2 //加
-#define OPERATOR_SUB	3 //减
-#define OPERATOR_AND	4 //与
-#define OPERATOR_OR		5 //或
-#define OPERATOR_EXP	6 //指数次方
+#define OPERATOR_MULTI  0 
+#define OPERATOR_DIV	1 
+#define OPERATOR_ADD	2 
+#define OPERATOR_SUB	3 
+#define OPERATOR_AND	4 
+#define OPERATOR_OR	5 
+#define OPERATOR_EXP	6 
 #define OPERATOR_NOT	7
 #define OPERATOR_LMOV	8
 #define OPERATOR_RMOV	9

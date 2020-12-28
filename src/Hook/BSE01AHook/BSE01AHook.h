@@ -7,6 +7,6 @@
 #define PIN_BOOT0            10
 
 #define SENSOR_PORT          0x0B
-#define INFOR_LEN            9
+#define INFOR_LEN            7
 #endif
 

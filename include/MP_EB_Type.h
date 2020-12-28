@@ -8,41 +8,41 @@ typedef struct t_uart_packet
 {
   S_periodTask     Uart_FrameOver; //72 bytes
   S_periodTask     UartRecv_Timeout; //72 bytes
-  unsigned int     RxLenth;     //????????????????
-  unsigned int     TxLenth;	//???????????????
+  unsigned int     RxLenth;     
+  unsigned int     TxLenth;	
   unsigned char    RxBuf[UART_MAX_RXBUFLEN];
-  unsigned char    TxBuf[UART_MAX_TXBUFLEN]; //RF??????��????????????????????RF????????
+  unsigned char    TxBuf[UART_MAX_TXBUFLEN]; 
 } PACKED MT_UartBusiness;
 
 /*******32 bytes to record the status of app********/
 typedef struct s_AppRunStatus
 {
-  u1_t PreTxCnt; //发�?�前ticks
+  u1_t PreTxCnt; //Tiks before sending
   
-  u1_t softrst:1; //软复�?
-  u1_t SwUp:1; //通过掌机通道上传
+  u1_t softrst:1; //Software Reset
+  u1_t SwUp:1; //Upload through SW channel
   u1_t Resv:6;
 
-  u1_t BllParaError:1; //解析业务参数出错
-  u1_t QueryTimeout:1; //查询是否超时
-  u1_t QueryNeverAck:1; //无串口数据接�?
-  u1_t AckCrcErr:1; //串口接收校验和错�?
-  u1_t AckLenErr:1; //串口接收数据长度错误
-  u1_t Div0Error:1; //运算时除数为0
-  u1_t Uart2Rxing:1; //uart2正在接收数据
-  u1_t Uart2Txing:1; //uart2正在发�?�数�?
+  u1_t BllParaError:1; //Error parsing business parameters
+  u1_t QueryTimeout:1; //
+  u1_t QueryNeverAck:1; //
+  u1_t AckCrcErr:1; //Serial port receive check sum error
+  u1_t AckLenErr:1; //Serial port receive lenth error��
+  u1_t Div0Error:1; //The divisor is 0
+  u1_t Uart2Rxing:1; //UART2 is receiving data
+  u1_t Uart2Txing:1; //UART2 is sending data
   
-  u1_t  LoraTxFailCnt; //lora发�?�连续失败次�?
-  u1_t	JoinFailCnt; //入网连续失败次数
-  u1_t  ClassSwitchFailCnt; //切换模式连续失败次数
-  u1_t  RadioBusyCnt; //射频�?
-  u1_t 	NoQueryCnt; //连续无串口任务运行次数（心跳包中�?查）
-  u1_t  NoLoraUpCnt; //连续无上行任务次数（心跳包中�?查）
-  u1_t 	ReQueryCnt; //重查次数
-  u1_t QueryTimeoutCnt; //连续查询超时次数
-  u1_t Uart2Sts1; //uart2状�?�寄存器1内容（只在串口接收错误时赋�?�）
-  u1_t Uart2Sts2;//uart2状�?�寄存器2内容（只在串口接收错误时赋�?�）
-  u1_t Resv2[19]; //保留
+  u1_t  LoraTxFailCnt; //Continuous failure times of Lora transmission
+  u1_t	JoinFailCnt; //Continuous failure times of join to LoraWan network
+  u1_t  ClassSwitchFailCnt; //Continuous failure times of switch classmode
+  u1_t  RadioBusyCnt; //count of RF busy
+  u1_t 	NoQueryCnt; //Number of consecutive no query task runs
+  u1_t  NoLoraUpCnt; //Number of consecutive no upload task runs
+  u1_t 	ReQueryCnt; //Number of re query
+  u1_t QueryTimeoutCnt; //Continuous query timeout times
+  u1_t Uart2Sts1; //UART2 status register 1 (only saved in case of serial port receiving error)
+  u1_t Uart2Sts2;//UART2 status register 2 (only saved in case of serial port receiving error)
+  u1_t Resv2[19]; 
 } PACKED MT_App_RunStatus;
 
 /**************************************************************************************************
@@ -118,7 +118,7 @@ typedef struct sQueryDevTmpltHdr //12bytes
   u1_t  AckLen;
   u4_t	FixedTime:27; //if FixedAcq=1,means  the dtu should acq at the moment in FixedTime(unit:ms);
   u4_t  FixedAcq:1; //0-the FixedTime is no used;1-the dtu should acq at the moment in FixedTime(unit:ms).
-  u4_t	IFSelect:3; //select the interface to send the query cmd.0-uart1;1-uart2;2-spi;3-i2c;4-gpio;5-ad.7-���ο����ɼ�
+  u4_t	IFSelect:3; //select the interface to send the query cmd.0-uart1;1-uart2;2-spi;3-i2c;4-gpio;5-ad.7-Secondary development acquisition
   u4_t  CheckLen:1;
 }PACKED MT_QueryDev_TmpltHdr;
 typedef struct sQueryDevTmplt

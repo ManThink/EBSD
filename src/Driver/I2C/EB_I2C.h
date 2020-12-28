@@ -25,12 +25,12 @@
 #define I2C_MASTER          0
 #define I2C_SLAVER          1
   
-#define I2C_ADDRESS_SHORT   0                                               /* 7位从地址模式          */
-#define I2C_ADDRESS_LONG    1                                               /* 10位从地址模式         */
+#define I2C_ADDRESS_SHORT   0                                               /* 7-bit slave address mode          */
+#define I2C_ADDRESS_LONG    1                                               /* 10-bit slave address mode         */
     
-#define NONE_SUBA           0                                               /* 无子地址模式           */
-#define ONE_BYTE_SUBA       1                                               /* 单字节子地址模式       */
-#define TWO_BYTE_SUBA       2                                               /* 双字节子地址模式       */
+#define NONE_SUBA           0                                               /* No subaddress mode           */
+#define ONE_BYTE_SUBA       1                                               /* 1-byte subaddress mode       */
+#define TWO_BYTE_SUBA       2                                               /* 2-byte subaddress mode        */
   
 #define I2C1_MODE                   0 
 
@@ -42,24 +42,24 @@
 #define I2C1_RANGE_SLAVER_ADR       0xAB
 #define I2C1_SLAVER_ADR_MATCH       0x0  
 
-/* 计算波特率公式 BT = BusCLK/(1 << MUL)/SCL_DIVIDE */  
-#define I2C1_MUL             1             /* 分频设置           */
-#define I2C1_BT_ERROR        50            /* I2C波特率最大误差  */  
+/* Formula for calculating baud rate BT = BusCLK/(1 << MUL)/SCL_DIVIDE */  
+#define I2C1_MUL             1             /* Frequency division setting          */
+#define I2C1_BT_ERROR        50            /* Maximum error of I2C baud rate  */  
 
 #define DEFAULT_BUS_CLOCK    24000000u     /* Default bus clock value */  
 
 typedef struct t_i2c_para
     {
-        volatile u1_t     sla;              /* I2C器件从地址              */
-        volatile u4_t     suba;             /* I2C期间内子地址            */
-        volatile u1_t     suba_num;         /* I2C子地址长度              */
-        volatile u1_t     *buf;             /* 数据缓冲区指针         */
-        volatile u4_t     num;              /* 要读取和写入的数据个数     */
-        volatile u1_t     end;              /* I2C总线结束标志            */
-        volatile u1_t     restart;          /* I2C总线重复标志            */
+        volatile u1_t     sla;              /* I2C device slave address              */
+        volatile u4_t     suba;             /* Internal subaddress of I2C device            */
+        volatile u1_t     suba_num;         /* I2C subaddress length             */
+        volatile u1_t     *buf;             /* Data buffer pointer         */
+        volatile u4_t     num;              /* Number of data to read and write     */
+        volatile u1_t     end;              /* I2C bus end flag            */
+        volatile u1_t     restart;          /* I2C bus repeat flag            */
         
-        volatile u1_t     irq_status;       /* I2C中断读写操作控制        */                                                                      /* 0--写模式                  */
-        volatile u1_t     sla_dir;          /* 从机控制 1--读取操作  0--写操作*/
+        volatile u1_t     irq_status;       /* I2C interrupt read / write operation control      */                                                                  
+        volatile u1_t     sla_dir;          /* Slave control 1 -- read operation 0 -- write operation*/
     }PACKED T_I2C_PARA;
 
 extern void MT_I2C_Init(void);

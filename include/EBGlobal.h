@@ -44,7 +44,7 @@ extern MT_UartBusiness	UartBusiness;// __attribute__((section(".ARM.__at_0x20003
 extern MT_QueryTaskPara	QueryTaskPara[MAX_QUERYPARA];//__attribute__((section(".ARM.__at_0x20002280"))); //0x48
 extern MT_BllPara 	BllPara; //__attribute__((section(".ARM.__at_0x20002380")));//0x28
 extern MT_Dtu_AppPara *UserAppPara;// __attribute__((section(".ARM.__at_0x200023C0"))); //0x04
-extern u1_t	BllParaBuf[BLLPARA_LEN+QUERY_RANDOM_LEN+UP_LORA_RANDOM_LEN]; //__attribute__((section(".ARM.__at_0x200023d0"))); 	//0x280	//Flash�д洢���豸���������˻�����
+extern u1_t	BllParaBuf[BLLPARA_LEN+QUERY_RANDOM_LEN+UP_LORA_RANDOM_LEN]; //__attribute__((section(".ARM.__at_0x200023d0"))); 	//0x280	
 extern SEMPHORE        SerialSem ;
 extern bool mt_dtu_resetAfterLWT    ;
 extern bool          mt_uart2;

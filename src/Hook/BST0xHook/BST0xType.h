@@ -30,6 +30,7 @@ typedef struct t_MT_Sensor_para
         u1_t    Vol;
         u1_t    RSSI;
         u1_t    SNR;
+        u1_t    Duration;
     }PACKED T_MT_Sensor_PARA; 
 
 typedef union U_MT_Sensor_PARA

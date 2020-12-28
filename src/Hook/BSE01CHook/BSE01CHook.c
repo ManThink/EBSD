@@ -18,7 +18,6 @@ void MT_PowerOFF()
       mpos_driver.GPIO_PinSet(15, RESET) ; 
       mpos_driver.GPIO_Config(6,GPIO_Mode_IPU); 
       mpos_driver.GPIO_Config(7,GPIO_Mode_IPU);
-      mpos_driver.GPIO_PinSet(2, RESET) ;
       mpos_driver.GPIO_Config(9,GPIO_Mode_IPD);
 }
 
@@ -26,7 +25,7 @@ void MT_MyParaInit()
 {
       MT_Sensor.MPRegister.Command=0x82;
       MT_Sensor.MPRegister.InforFormat=0x21;
-      MT_Sensor.MPRegister.MType=0x01A;
+      MT_Sensor.MPRegister.MType=0x16;
       MT_Sensor.MPRegister.AlarmStatus.Bits.Sht20Status=0;
       MT_Sensor.MPRegister.AlarmStatus.Bits.Ds18b20Status=0;
       MT_Sensor.MPRegister.AlarmStatus.Bits.AccStatus=0;
@@ -41,13 +40,13 @@ void MT_MyParaInit()
 
 u1_t  MT_BoardInit()
 {   
-
     mpos_driver.GPIO_Config(PIN_I2C_SCL,GPIO_Mode_OPP);
     mpos_driver.GPIO_PinSet(PIN_I2C_SCL, SET) ;    
     mpos_driver.GPIO_Config(PIN_I2C_SDA,GPIO_Mode_OPP);
     mpos_driver.GPIO_PinSet(PIN_I2C_SDA, SET) ;
     mpos_driver.GPIO_Config(2,GPIO_Mode_OPP);
     mpos_driver.GPIO_Config(4,GPIO_Mode_OPP);
+    mpos_driver.GPIO_PinSet(2, RESET);
     MT_MyParaInit();    
     return 1;
 }
@@ -76,6 +75,7 @@ u1_t MT_Init()
 
 u1_t EB_HookInit()
 {
+  mt_eb_runpara.fb_uart2=0;
   EB_Hook.Hook_BoardInit=MT_BoardInit;
   EB_Hook.Hook_APPInit=MT_Init;
   EB_Hook.Hook_WKIRQ=NULL;
